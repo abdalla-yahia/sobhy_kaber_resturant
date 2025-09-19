@@ -5,7 +5,7 @@ import { setRequestLocale, getMessages } from "next-intl/server";
 
 type Props = {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 

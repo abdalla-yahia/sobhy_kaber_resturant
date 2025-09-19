@@ -5,8 +5,6 @@ import { getAllMeal} from "@/Features/Actions/MealsActions";
 import { getAllUsers } from "@/Features/Actions/UsersActions";
 import { RootState, useAppDispatch, useAppSelector } from "@/Libs/Store/Store";
 import { useEffect } from "react";
-import { setBrandsRedux, setCategoriesRedux, setPageNumberRedux, setPriceRedux, setSearchTextRedux } from "@/Features/Slices/MealsSlice";
-import {  useSearchParams } from "next/navigation";
 import { getAllLanguagies } from "@/Features/Actions/LanguageActions";
 import { getAllTranslateCategory } from "@/Features/Actions/TranslateCategoryActions";
 
@@ -14,18 +12,6 @@ export default function AdminsLayout({ children, }: Readonly<{ children: React.R
     const { user } = useAppSelector((state: RootState) => state.user)
     const { category } = useAppSelector((state: RootState) => state.category)
     const dispatch = useAppDispatch()
-    const searchParams = useSearchParams();
-    //Get Query From Url After Reload Page
-    useEffect(() => {
-      dispatch(setPageNumberRedux(searchParams.get("pageNumber") || '1'))
-      dispatch(setSearchTextRedux(searchParams.get("search") || ''))
-      dispatch(setCategoriesRedux(searchParams.get("categories")?.split(",") || []))
-      dispatch(setBrandsRedux(searchParams.get("brands")?.split(",") || []))
-      dispatch(setPriceRedux({
-        min: searchParams.get("minPrice") || "",
-        max: searchParams.get("maxPrice") || "",
-      }))
-    }, [])
 
   useEffect(() => {
     dispatch(getAllCategories())

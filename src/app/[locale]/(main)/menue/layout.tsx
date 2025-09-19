@@ -8,7 +8,7 @@ export default function MenuLayout({children}:{children: React.ReactNode}){
     const dispatch = useAppDispatch()
     useEffect(()=>{
         dispatch(getAllCategories())
-    },[])
+    },[dispatch])
     return(
         <>
         {children}
