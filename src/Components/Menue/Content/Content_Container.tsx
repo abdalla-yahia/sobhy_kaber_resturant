@@ -23,6 +23,7 @@ export default function Content_Container() {
             <Image className="w-full absolute top-[70%] skew-y-[23deg]" src={'https://static.vecteezy.com/system/resources/previews/069/729/225/non_2x/delicious-grilled-kofta-kebabs-on-a-skewer-closeup-shot-of-juicy-meatballs-free-png.png'}  alt="Kofta" width={150} height={20}/>
             <p className="text-sm font-medium text-black">{t('front.since')}</p>
             </div>
+            {/*Empty*/}
             <div className="text-black overflow-hidden w-full bg-gradient-to-r from-amber-100 to-orange-200 flex flex-col justify-start items-center gap-3 p-5">
              <Image src={'/Images/Logo.png'} alt="image-logo" width={500} height={150}/>
               <Image className="w-full absolute top-[70%] skew-y-[23deg]" src={'https://static.vecteezy.com/system/resources/previews/069/729/225/non_2x/delicious-grilled-kofta-kebabs-on-a-skewer-closeup-shot-of-juicy-meatballs-free-png.png'}  alt="Kofta" width={150} height={20}/>
@@ -54,7 +55,11 @@ export default function Content_Container() {
          }
         )
       }
-      
+        {/*Empty*/}
+            <div className="text-black overflow-hidden w-full bg-gradient-to-r from-amber-100 to-orange-200 flex flex-col justify-start items-center gap-3 p-5">
+             <Image src={'/Images/Logo.png'} alt="image-logo" width={500} height={150}/>
+              <Image className="w-full absolute top-[70%] skew-y-[23deg]" src={'https://static.vecteezy.com/system/resources/previews/069/729/225/non_2x/delicious-grilled-kofta-kebabs-on-a-skewer-closeup-shot-of-juicy-meatballs-free-png.png'}  alt="Kofta" width={150} height={20}/>
+            </div>
             {/*Call Now*/}
             <div key={'call-now'} className="w-full text-center text-white h-[650px] flex flex-col px-1 pt-[90px] justify-start items-center bg-gradient-to-b from-orange-500 to-red-500 ">
                 {/*Header Title*/}
