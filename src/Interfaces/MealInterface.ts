@@ -1,0 +1,41 @@
+export interface CreateMeal {
+    title:string
+    slug?:string 
+    description?:string
+    price:number
+    quantity?:number 
+    image?:string,
+    categoryId:string
+    gallery?:string[]
+}
+export interface UpdateMeal {
+    slug?:string 
+    id?:string
+    title?:string
+    description?:string
+    price?:number
+    quantity?:number
+    image?:string
+    rating?:string
+    offer?:string
+    gallery?:string[]
+    categoryId?:string
+    category?:{
+        id:string,
+        title:string
+        image:string,
+          translations?:{
+        id:number
+        name:string
+        mealId:string
+        LocalId:string
+    }[]
+    }
+    translations?:{
+        id:number
+        name:string
+        mealId:string
+        LocalId:string
+    }[]
+
+}

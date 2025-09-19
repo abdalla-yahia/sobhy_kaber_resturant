@@ -1,0 +1,228 @@
+{
+      "header":{
+        "home":"Home",
+        "menue":"Menue",
+        "about":"About",
+        "contact":"Contact",
+        "order":"Order Now"
+         },
+      "homepage":{
+         "sliders":{
+                "slider1": {
+                  "title": "The Authentic Egyptian Taste from Cairo to the World",
+                  "paragraph": "A unique dining experience full of joy for everyone",
+                  "button": "Explore the Menu"
+                },
+                "slider2": {
+                  "title": "Private Dining Halls",
+                  "paragraph": "Celebrate your next occasion with us",
+                  "button": "Learn More"
+                },
+                "slider3": {
+                  "title": "Our Humble Beginning",
+                  "paragraph": "It all started with a small cart",
+                  "button": "Our Story"
+                }
+              },
+              "sections":{ 
+                "header":"Learn More About Sobhy Kaber",
+                "text":"Authentic Egyptian Taste Around the World",  
+                "section1": {
+                    "title": "Authentic Egyptian Feasts from Our Farms to Your Table",
+                    "paragraph": "Sobhy Kaber started in Egypt and quickly became one of the most popular dining destinations attracting people of all tastes and cultures. The restaurant is known for serving traditional Egyptian cuisine in its delicious dishes, offering a delightful experience for everyone. From premium grilled meats to classic Egyptian desserts, Sobhy Kaber’s dishes will keep you coming back for more."
+                  },
+                  "section2": {
+                    "title": "Unique Atmosphere Blending Tradition and Modernity",
+                    "paragraph": "Sobhy Kaber offers a special experience that combines authentic Egyptian character with modern design touches. From cozy seating and warm lighting to details that reflect heritage, you will feel a balance of comfort and elegance."
+                  },
+                  "section3": {
+                    "title": "Exceptional Service and Egyptian Hospitality",
+                    "paragraph": "At Sobhy Kaber, we believe hospitality is an art. Our trained team is always ready to make your visit unforgettable, from the moment you arrive until you leave. We pay attention to every detail to ensure your comfort and satisfaction."
+                  },
+                  "section4": {
+                    "title": "A Family Experience Full of Memories",
+                    "paragraph": "Our restaurant is more than just a place to eat – it’s a space for families and friends to gather and celebrate special moments. We provide private halls and an environment suitable for all occasions, ensuring you create unforgettable memories with your loved ones."
+                  }
+              }
+          },
+      "loginPage": {
+  "title": "Login",
+  "form": {
+    "email": "User Email",
+    "password": "Password",
+    "login": "Login"
+  },
+  "user": "User",
+  "success": "Logged in successfully",
+  "faild": "Login failed",
+  "dont": "Don’t have an account?",
+  "register": "Click here"
+          },
+      "registerPage": {
+          "title": "Create New User",
+          "form": {
+            "name": "Username",
+            "email": "User Email",
+            "password": "Password",
+            "confirm": "Confirm Password",
+            "phone": "Phone Number",
+            "address": "Address",
+            "gender": "Gender",
+            "selectgender": "Select Gender",
+            "male": "Male",
+            "female": "Female",
+            "register": "Register",
+            "capital": "Password must contain at least one uppercase letter",
+            "small": "Password must contain at least one lowercase letter",
+            "number": "Password must contain at least one number",
+            "count": "Password must be at least 8 characters long"
+          },
+          "success": "User created successfully",
+          "faild": "Failed to create user",
+          "have": "Already have an account?",
+          "login": "Click here"
+          },
+        "logoutpage": {
+              "logout": "Logout",
+              "dashboard": "Dashboard",
+              "user": "User",
+              "admin": "Admin"
+          },
+        "menuepage": {
+            "front": {
+              "title": "Kababgy Sobhy Kaber",
+              "since": "Since 1996"
+            },
+            "back": {
+              "story": {
+                "title": "His Struggle Story",
+                "description": "Sobhy Kaber is a symbol of inspiring struggle. He began his journey with a simple cart offering a limited number of dishes. After achieving remarkable success, he decided to expand by purchasing a large farm to raise livestock under his personal supervision. In 2016, Sobhy Kaber bought a new location to open a new branch, moving from his old one. This new branch is his only branch in Egypt, and a new one has been opened in the Kingdom."
+              },
+              "advertis": {
+                "title": "All kinds of salads and bread",
+                "free": "Free",
+                "ordernow": "Order Now",
+                "number": "16640",
+                "address": "151 - Obeid St., Safwa Towers - Behind Electricity Club - Shubra El-Sahel",
+                "garage": "Garage available under the restaurant",
+                "taxes": "All prices include VAT"
+              }
+            }
+         },
+         "dashboard": {
+            "HomePage": "Home",
+            "Dashboard": "Dashboard",
+            "Users": "Users",
+            "Meals": "Meals",
+            "Categories": "Categories",
+            "Add New Language": "Add New Language",
+            "Category Translate": "Category Translation",
+            "Meal Translate": "Meal Translation",
+            "Add New Category": "Add New Category",
+            "Add New Meal": "Add New Meal",
+            "Setting": "Settings",
+            "home": {
+              "title": "Admin Dashboard",
+              "totalprice": "Total Sales",
+              "weekly": "Weekly Sales",
+              "allusers": "All Users",
+              "allmeals": "All Meals",
+                "Saturday": "Saturday",
+                "Sunday": "Sunday",
+                "Monday": "Monday",
+                "Tuesday": "Tuesday",
+                "Wednesday": "Wednesday",
+                "Thursday": "Thursday",
+                "Friday": "Friday"
+            },
+            "users": {
+              "allusers": "All Users",
+              "image": "Image",
+              "name": "Name",
+              "gender": "Gender",
+              "email": "Email",
+              "phone": "Phone",
+              "address": "Address",
+              "role": "Role"
+            },
+            "meals": {
+              "allmeals": "All Meals",
+              "image": "Image",
+              "title": "Title",
+              "description": "Description",
+              "category": "Category",
+              "quantity": "Quantity",
+              "price": "Price",
+              "offer": "Offer",
+              "action": "Actions"
+            },
+            "addnewmeal": {
+              "header": "Add New Meal",
+              "updateheader": "Update Meal",
+              "image": "Meal Image URL",
+              "title": "Meal Name",
+              "description": "Meal Description",
+              "offer": "Meal Offer",
+              "price": "Meal Price",
+              "quantity": "Meal Quantity",
+              "category": "Category",
+              "selectcategory": "Select Meal Category",
+              "save": "Save",
+              "success": "Meal created successfully",
+              "faild": "Failed to create meal"
+            },
+            "categories": {
+              "allcategories": "All Categories",
+              "image": "Image",
+              "title": "Title",
+              "description": "Description",
+              "action": "Actions"
+            },
+            "addnewcategory": {
+              "header": "Add New Category",
+              "updateheader": "Update Category",
+              "image": "Category Image URL",
+              "title": "Category Name",
+              "description": "Category Description",
+              "success": "Category created successfully",
+              "faild": "Failed to create category",
+              "save": "Save"
+            },
+            "addnewLanguage": {
+              "header": "Add New Language",
+              "updateheader": "Update Language",
+              "image": "Flag Image URL",
+              "title": "Language Code",
+              "description": "Language Name",
+              "success": "Language created successfully",
+              "faild": "Failed to create language",
+              "save": "Save"
+            },
+            "personaldata": {
+              "phone": "Phone Number",
+              "address": "Address",
+              "gender": "Gender",
+              "logindate": "Registration Date"
+            },
+            "translateCategory": {
+              "header": "Add Category Translations",
+              "title": "Category Name",
+              "selectcategory": "Select Category",
+              "save": "Save"
+            },
+            "translateMeal": {
+              "header": "Add Translations for the Meal",
+              "title": "Meal Name",
+              "selectMeal": "Select Meal",
+              "save": "Save"
+            }
+      },
+      "mealDetails": {
+        "price": "Price",
+        "quantity": "Quantity",
+        "Calories": "Calories"
+      }
+
+
+
+}

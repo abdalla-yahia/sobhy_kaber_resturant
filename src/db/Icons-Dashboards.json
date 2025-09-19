@@ -1,0 +1,73 @@
+{
+  "admins": [
+    {
+      "id": 0,
+      "title": "HomePage",
+      "icon": "FaHome",
+      "href": "/"
+    },
+    {
+      "id": 1,
+      "title": "Dashboard",
+      "icon": "MdDashboard",
+      "href": "/dashboard/admins"
+    },
+    {
+      "id": 2,
+      "title": "Users",
+      "icon": "FaUsers",
+      "href": "/dashboard/admins/users"
+    },
+    {
+      "id": 3,
+      "title": "Meals",
+      "icon": "MdInventory2",
+      "href": "/dashboard/admins/meals"
+    },
+    {
+      "id": 4,
+      "title": "Categories",
+      "icon": "BiSolidCategory",
+      "href": "/dashboard/admins/categories"
+    },
+
+    {
+      "id": 6,
+      "title": "Add New Language",
+      "icon": "IoLanguageOutline",
+      "href": "/dashboard/admins/add-language"
+    },
+    {
+      "id": 7,
+      "title": "Add New Category",
+      "icon": "TbCategoryPlus",
+      "href": "/dashboard/admins/add-category"
+    },
+    {
+      "id": 5,
+      "title": "Category Translate",
+      "icon": "BsTranslate",
+      "href": "/dashboard/admins/translate-category"
+    },
+    {
+      "id": 8,
+      "title": "Meal Translate",
+      "icon": "SiGoogletranslate",
+      "href": "/dashboard/admins/translate-meal"
+    },
+
+    {
+      "id": 9,
+      "title": "Add New Meal",
+      "icon": "MdAddBox",
+      "href": "/dashboard/admins/add-meal"
+    },
+     {
+      "id": 10,
+      "title": "Setting",
+      "icon": "FaAddressCard",
+      "href": "/dashboard/admins/personal-data"
+    }
+
+  ]
+}

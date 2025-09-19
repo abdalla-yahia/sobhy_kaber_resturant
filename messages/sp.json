@@ -1,0 +1,228 @@
+{
+  "header": {
+    "home": "Inicio",
+    "menue": "Menú",
+    "about": "¿Quiénes somos?",
+    "contact": "Contáctanos",
+    "order": "Haz tu pedido ahora"
+  },
+  "homepage": {
+    "sliders": {
+      "slider1": {
+        "title": "El auténtico sabor egipcio, de El Cairo al mundo",
+        "paragraph": "Una experiencia gastronómica única llena de placer para todos",
+        "button": "Explorar el menú"
+      },
+      "slider2": {
+        "title": "Salones privados",
+        "paragraph": "Celebra tu próximo evento con nosotros",
+        "button": "Saber más"
+      },
+      "slider3": {
+        "title": "Nuestros humildes comienzos",
+        "paragraph": "Todo comenzó con un pequeño carrito",
+        "button": "Nuestra historia"
+      }
+    },
+    "sections": {
+      "header": "Conoce más sobre Sobhy Kaber",
+      "text": "Un auténtico sabor egipcio en todo el mundo",
+      "section1": {
+        "title": "Banquetes egipcios auténticos, de nuestras granjas a tu mesa",
+        "paragraph": "Sobhy Kaber comenzó en Egipto y rápidamente se convirtió en uno de los destinos gastronómicos más famosos, atrayendo a personas de diferentes culturas. El restaurante ofrece platos tradicionales egipcios sabrosos y una experiencia gastronómica única. Prueba carnes de alta calidad y postres egipcios tradicionales. Ya sea a la parrilla o al horno, los platos de Sobhy Kaber te harán volver por más."
+      },
+      "section2": {
+        "title": "Un ambiente único que combina tradición y modernidad",
+        "paragraph": "Sobhy Kaber te ofrece una experiencia que combina lo auténtico egipcio con toques modernos en la decoración. Desde asientos cómodos e iluminación cálida hasta detalles que reflejan el patrimonio, sentirás comodidad y elegancia."
+      },
+      "section3": {
+        "title": "Servicio excepcional y hospitalidad egipcia",
+        "paragraph": "En Sobhy Kaber creemos que la hospitalidad es un arte. Nuestro equipo entrenado siempre está listo para hacer que tu visita sea inolvidable, desde el momento en que entras hasta que sales. Nos ocupamos de cada detalle para garantizar tu comodidad y satisfacción."
+      },
+      "section4": {
+        "title": "Una experiencia familiar llena de recuerdos",
+        "paragraph": "Nuestro restaurante no es solo un lugar para comer, sino un espacio para reunirse con la familia y amigos y celebrar los mejores momentos. Ofrecemos salones privados y un ambiente adecuado para todas las ocasiones."
+      }
+    }
+  },
+  "loginPage": {
+  "title": "Iniciar sesión",
+  "form": {
+    "email": "Correo del usuario",
+    "password": "Contraseña",
+    "login": "Entrar"
+  },
+  "user": "Usuario",
+  "success": "Inicio de sesión exitoso",
+  "faild": "Error al iniciar sesión",
+  "dont": "¿No tienes una cuenta?",
+  "register": "Haz clic aquí"
+},
+  "registerPage": {
+    "title": "Crear nuevo usuario",
+    "form": {
+      "name": "Nombre de usuario",
+      "email": "Correo del usuario",
+      "password": "Contraseña",
+      "confirm": "Confirmar contraseña",
+      "phone": "Número de teléfono",
+      "address": "Dirección",
+      "gender": "Género",
+      "selectgender": "Selecciona género",
+      "male": "Hombre",
+      "female": "Mujer",
+      "register": "Registrarse",
+      "capital": "La contraseña debe contener al menos una letra mayúscula",
+      "small": "La contraseña debe contener al menos una letra minúscula",
+      "number": "La contraseña debe contener al menos un número",
+      "count": "La contraseña debe tener al menos 8 caracteres"
+    },
+    "success": "Usuario creado con éxito",
+    "faild": "Error al crear usuario",
+    "have": "¿Ya tienes una cuenta?",
+    "login": "Haz clic aquí"
+  },
+   "logoutpage": {
+    "logout": "Cerrar sesión",
+    "dashboard": "Panel de control",
+    "user": "Usuario",
+    "admin": "Administrador"
+  },
+  "menuepage": {
+    "front": {
+      "title": "Kababgy Sobhy Kaber",
+      "since": "Desde 1996"
+    },
+    "back": {
+      "story": {
+        "title": "Su historia de lucha",
+        "description": "Sobhy Kaber es un símbolo de lucha inspiradora. Comenzó su camino con un carrito sencillo que ofrecía un número limitado de platos. Tras lograr un éxito notable, decidió expandirse comprando una granja grande para criar ganado bajo su supervisión personal. En 2016, Sobhy Kaber compró un nuevo lugar para abrir una nueva sucursal, trasladándose de la antigua. Esta nueva sucursal es la única en Egipto, y se abrió otra en el Reino."
+      },
+      "advertis": {
+        "title": "Todo tipo de ensaladas y pan",
+        "free": "Gratis",
+        "ordernow": "Pide ahora",
+        "number": "16640",
+        "address": "151 - Calle Obeid, Torres Safwa - Detrás del Club de Electricidad - Shubra El-Sahel",
+        "garage": "Garaje disponible debajo del restaurante",
+        "taxes": "Todos los precios incluyen IVA"
+      }
+    }
+  },
+  "dashboard": {
+      "HomePage": "Inicio",
+      "Dashboard": "Panel de control",
+      "Users": "Usuarios",
+      "Meals": "Comidas",
+      "Categories": "Categorías",
+      "Add New Language": "Agregar nuevo idioma",
+      "Category Translate": "Traducción de categoría",
+      "Meal Translate": "Traducción de comida",
+      "Add New Category": "Agregar nueva categoría",
+      "Add New Meal": "Agregar nueva comida",
+      "Setting": "Configuraciones",
+      "home": {
+        "title": "Panel de administrador",
+        "totalprice": "Ventas totales",
+        "weekly": "Ventas semanales",
+        "allusers": "Todos los usuarios",
+        "allmeals": "Todas las comidas",
+        "Saturday": "Sábado",
+        "Sunday": "Domingo",
+        "Monday": "Lunes",
+        "Tuesday": "Martes",
+        "Wednesday": "Miércoles",
+        "Thursday": "Jueves",
+        "Friday": "Viernes"
+      },
+      "users": {
+        "allusers": "Todos los usuarios",
+        "image": "Imagen",
+        "name": "Nombre",
+        "gender": "Género",
+        "email": "Correo electrónico",
+        "phone": "Teléfono",
+        "address": "Dirección",
+        "role": "Rol"
+      },
+      "meals": {
+        "allmeals": "Todas las comidas",
+        "image": "Imagen",
+        "title": "Título",
+        "description": "Descripción",
+        "category": "Categoría",
+        "quantity": "Cantidad",
+        "price": "Precio",
+        "offer": "Oferta",
+        "action": "Acciones"
+      },
+      "addnewmeal": {
+        "header": "Agregar nueva comida",
+        "updateheader": "Actualizar comida",
+        "image": "URL de la imagen de la comida",
+        "title": "Nombre de la comida",
+        "description": "Descripción de la comida",
+        "offer": "Oferta de comida",
+        "price": "Precio de la comida",
+        "quantity": "Cantidad de comidas",
+        "category": "Categoría",
+        "selectcategory": "Seleccionar categoría",
+        "save": "Guardar",
+        "success": "Comida creada con éxito",
+        "faild": "Error al crear la comida"
+      },
+      "categories": {
+        "allcategories": "Todas las categorías",
+        "image": "Imagen",
+        "title": "Título",
+        "description": "Descripción",
+        "action": "Acciones"
+      },
+      "addnewcategory": {
+        "header": "Agregar nueva categoría",
+        "updateheader": "Actualizar categoría",
+        "image": "URL de la imagen de la categoría",
+        "title": "Nombre de la categoría",
+        "description": "Descripción de la categoría",
+        "success": "Categoría creada con éxito",
+        "faild": "Error al crear la categoría",
+        "save": "Guardar"
+      },
+      "addnewLanguage": {
+        "header": "Agregar nuevo idioma",
+        "updateheader": "Actualizar idioma",
+        "image": "URL de la imagen de la bandera",
+        "title": "Código del idioma",
+        "description": "Nombre del idioma",
+        "success": "Idioma creado con éxito",
+        "faild": "Error al crear el idioma",
+        "save": "Guardar"
+      },
+      "personaldata": {
+        "phone": "Número de teléfono",
+        "address": "Dirección",
+        "gender": "Género",
+        "logindate": "Fecha de registro"
+      },
+      "translateCategory": {
+        "header": "Agregar traducciones de categoría",
+        "title": "Nombre de la categoría",
+        "selectcategory": "Seleccionar categoría",
+        "save": "Guardar"
+      },
+        "translateMeal": {
+          "header": "Agregar traducciones para la comida",
+          "title": "Nombre de la comida",
+          "selectMeal": "Seleccionar comida",
+          "save": "Guardar"
+     }
+
+},
+"mealDetails": {
+    "price": "Precio",
+    "quantity": "Cantidad",
+    "Calories": "Calorías"
+  }
+
+
+}

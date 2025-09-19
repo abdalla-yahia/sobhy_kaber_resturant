@@ -1,0 +1,227 @@
+{
+  "header": {
+    "home": "首页",
+    "menue": "菜单",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "order": "立即订餐"
+  },
+  "homepage": {
+    "sliders": {
+      "slider1": {
+        "title": "正宗埃及风味，从开罗到世界",
+        "paragraph": "独特的美食体验，带给所有人的享受",
+        "button": "探索菜单"
+      },
+      "slider2": {
+        "title": "私人餐厅",
+        "paragraph": "与我们一起庆祝您的下一个聚会",
+        "button": "了解更多"
+      },
+      "slider3": {
+        "title": "我们的朴素起点",
+        "paragraph": "一切始于一辆小推车",
+        "button": "我们的故事"
+      }
+    },
+    "sections": {
+      "header": "了解更多关于 Sobhy Kaber",
+      "text": "正宗埃及风味，走向世界",
+      "section1": {
+        "title": "正宗的埃及盛宴，从农场到餐桌",
+        "paragraph": "Sobhy Kaber 起源于埃及，很快成为最受欢迎的美食目的地之一，吸引了来自不同文化的人们。餐厅提供传统美味的埃及菜肴和难忘的美食体验。品尝优质的肉类和传统埃及甜点。无论是烧烤还是烘焙，Sobhy Kaber 的菜肴都会让您一次又一次地回来。"
+      },
+      "section2": {
+        "title": "独特氛围，融合传统与现代",
+        "paragraph": "Sobhy Kaber 为您带来不同的体验，将正宗的埃及风情与现代装饰相结合。从舒适的座椅和温暖的灯光到反映传统的细节，您会感受到舒适与优雅并存。"
+      },
+      "section3": {
+        "title": "优质服务，埃及式热情款待",
+        "paragraph": "在 Sobhy Kaber，我们相信好客是一门艺术。我们训练有素的团队始终准备好让您的到访难以忘怀，从进门到离开。我们注重每一个细节，确保您的舒适与满意。"
+      },
+      "section4": {
+        "title": "充满回忆的家庭体验",
+        "paragraph": "我们的餐厅不仅是用餐的地方，更是家人和朋友相聚、庆祝美好时光的空间。我们提供私人包间和适合各种场合的环境，让您与挚爱共度美好时光。"
+      }
+    }
+  },
+  "loginPage": {
+  "title": "登录",
+  "form": {
+    "email": "用户邮箱",
+    "password": "密码",
+    "login": "登录"
+  },
+  "user": "用户",
+  "success": "登录成功",
+  "faild": "登录失败",
+  "dont": "没有账号？",
+  "register": "点击这里"
+  },
+  "registerPage": {
+    "title": "创建新用户",
+    "form": {
+      "name": "用户名",
+      "email": "用户邮箱",
+      "password": "密码",
+      "confirm": "确认密码",
+      "phone": "电话号码",
+      "address": "地址",
+      "gender": "性别",
+      "selectgender": "选择性别",
+      "male": "男",
+      "female": "女",
+      "register": "注册",
+      "capital": "密码必须至少包含一个大写字母",
+      "small": "密码必须至少包含一个小写字母",
+      "number": "密码必须至少包含一个数字",
+      "count": "密码长度至少为8个字符"
+    },
+    "success": "用户创建成功",
+    "faild": "用户创建失败",
+    "have": "已有账号？",
+    "login": "点击这里"
+  },
+  "logoutpage": {
+    "logout": "退出登录",
+    "dashboard": "仪表板",
+    "user": "用户",
+    "admin": "管理员"
+  },
+  "menuepage": {
+    "front": {
+      "title": "Kababgy Sobhy Kaber",
+      "since": "自1996年以来"
+    },
+    "back": {
+      "story": {
+        "title": "他的奋斗故事",
+        "description": "Sobhy Kaber 是奋斗的象征。他的旅程始于一辆简单的小车，只提供有限的菜肴。在取得显著成功后，他决定扩大规模，购买了一座大型农场，在他的亲自监督下饲养牲畜。2016年，Sobhy Kaber 购买了一个新地点开设分店，从旧店搬迁而来。这家新店是他在埃及唯一的分店，并在王国开设了另一家。"
+      },
+      "advertis": {
+        "title": "各种沙拉和面包",
+        "free": "免费",
+        "ordernow": "立即订购",
+        "number": "16640",
+        "address": "151 - Obeid街，Safwa大厦 - 电力俱乐部后面 - Shubra El-Sahel",
+        "garage": "餐厅地下有车库",
+        "taxes": "所有价格均含增值税"
+      }
+    }
+  },
+  "dashboard": {
+        "HomePage": "首页",
+        "Dashboard": "控制面板",
+        "Users": "用户",
+        "Meals": "餐点",
+        "Categories": "分类",
+        "Add New Language": "添加新语言",
+        "Category Translate": "分类翻译",
+        "Meal Translate": "餐点翻译",
+        "Add New Category": "添加新分类",
+        "Add New Meal": "添加新餐点",
+        "Setting": "设置",
+        "home": {
+          "title": "管理员控制面板",
+          "totalprice": "总销售额",
+          "weekly": "每周销售额",
+          "allusers": "所有用户",
+          "allmeals": "所有餐点",
+           "Saturday": "星期六",
+          "Sunday": "星期日",
+          "Monday": "星期一",
+          "Tuesday": "星期二",
+          "Wednesday": "星期三",
+          "Thursday": "星期四",
+          "Friday": "星期五"
+        },
+        "users": {
+          "allusers": "所有用户",
+          "image": "图片",
+          "name": "姓名",
+          "gender": "性别",
+          "email": "邮箱",
+          "phone": "电话",
+          "address": "地址",
+          "role": "角色"
+        },
+        "meals": {
+          "allmeals": "所有餐点",
+          "image": "图片",
+          "title": "标题",
+          "description": "描述",
+          "category": "分类",
+          "quantity": "数量",
+          "price": "价格",
+          "offer": "优惠",
+          "action": "操作"
+        },
+        "addnewmeal": {
+          "header": "添加新餐点",
+          "updateheader": "更新餐点",
+          "image": "餐点图片链接",
+          "title": "餐点名称",
+          "description": "餐点描述",
+          "offer": "餐点优惠",
+          "price": "餐点价格",
+          "quantity": "餐点数量",
+          "category": "分类",
+          "selectcategory": "选择餐点分类",
+          "save": "保存",
+          "success": "餐点创建成功",
+          "faild": "创建餐点失败"
+        },
+        "categories": {
+          "allcategories": "所有分类",
+          "image": "图片",
+          "title": "名称",
+          "description": "描述",
+          "action": "操作"
+        },
+        "addnewcategory": {
+          "header": "添加新分类",
+          "updateheader": "更新分类",
+          "image": "分类图片链接",
+          "title": "分类名称",
+          "description": "分类描述",
+          "success": "分类创建成功",
+          "faild": "创建分类失败",
+          "save": "保存"
+        },
+        "addnewLanguage": {
+          "header": "添加新语言",
+          "updateheader": "更新语言",
+          "image": "国旗图片链接",
+          "title": "语言代码",
+          "description": "语言名称",
+          "success": "语言创建成功",
+          "faild": "创建语言失败",
+          "save": "保存"
+        },
+        "personaldata": {
+          "phone": "电话号码",
+          "address": "地址",
+          "gender": "性别",
+          "logindate": "注册日期"
+        },
+        "translateCategory": {
+          "header": "添加分类翻译",
+          "title": "分类名称",
+          "selectcategory": "选择分类",
+          "save": "保存"
+        },
+         "translateMeal": {
+            "header": "为餐点添加翻译",
+            "title": "餐点名称",
+            "selectMeal": "选择餐点",
+            "save": "保存"
+       }
+  },
+    "mealDetails": {
+      "price": "价格",
+      "quantity": "数量",
+      "Calories": "卡路里"
+    }
+
+
+}
