@@ -32,6 +32,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} dir={locale== 'ar' ? 'rtl':'ltr'}>
+      <link rel="manifest" href={`/${locale}/manifest.webmanifest`} />
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header_Container currentLocale={locale}/>

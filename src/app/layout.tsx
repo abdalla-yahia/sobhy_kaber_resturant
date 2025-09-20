@@ -213,6 +213,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar">
+    
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex-col`}
       >

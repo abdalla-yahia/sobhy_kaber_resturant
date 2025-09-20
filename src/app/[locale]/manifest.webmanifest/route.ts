@@ -33,7 +33,7 @@ const manifests: Record<string,Prop > = {
     lang: "fr",
     start_url: "/fr",
   },
-  es: {
+  sp: {
     name: "Sobhy Kaber",
     short_name: "Sobhy",
     description:
