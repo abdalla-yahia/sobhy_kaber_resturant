@@ -58,11 +58,9 @@ const manifests: Record<string,Prop > = {
   },
 };
 
-export async function GET(
-  req: Request,
-  { params }: { params: { locale: string } }
+export async function GET(req: Request,{ params }: { params: Promise<{ locale: string }> }
 ) {
-  const { locale } = params;
+  const { locale } = await params;
   const manifest = manifests[locale] || manifests["en"];
 
   return NextResponse.json(

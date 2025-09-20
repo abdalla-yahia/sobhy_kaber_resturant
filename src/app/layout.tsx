@@ -172,7 +172,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "Sobhy Kaber Restaurant",
       images: [
         {
-          url: "/images/og-image.jpg",
+          url: "/Images/Logo.png",
           width: 1200,
           height: 630,
           alt: t.title,
@@ -185,7 +185,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: t.twitterTitle,
       description: t.twitterDescription,
-      images: ["/images/og-image.jpg"],
+      images: ["/Images/Logo.png"],
     },
     alternates: {
       canonical: `${baseUrl}/${lang}`,
