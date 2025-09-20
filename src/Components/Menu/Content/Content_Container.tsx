@@ -15,7 +15,7 @@ export default function Content_Container() {
     <section dir="rtl" className="w-full flex justify-center items-start gap-2 flex-wrap overflow-hidden">
       {/*Content Menue*/}
       {AllCategories?.categories?.length > 0 &&
-      <HTMLFlipBook  width={400} height={600} drawShadow showCover={true} showPageCorners={true} className={""} style={{}} startPage={0} size={"fixed"} minWidth={0} maxWidth={0} minHeight={0} maxHeight={0} flippingTime={1500} usePortrait={false} startZIndex={0} autoSize={false} maxShadowOpacity={0} mobileScrollSupport={false} clickEventForward={false} useMouseEvents={true} swipeDistance={5} disableFlipByClick={false}>
+      <HTMLFlipBook  width={400} height={600} drawShadow showCover={true} showPageCorners={true} className={"w-full h-full"} style={{}} startPage={0} size={"stretch"} minWidth={300} maxWidth={800} minHeight={400} maxHeight={1000} flippingTime={1500} usePortrait={true} startZIndex={0} autoSize={true} maxShadowOpacity={0} mobileScrollSupport={true} clickEventForward={false} useMouseEvents={true} swipeDistance={5} disableFlipByClick={false}>
         {/*Menu Cover*/}
             <div key={'cover'} className="w-full h-[150px] text-center relative flex flex-col p-1 justify-center items-center   bg-gradient-to-r to-orange-500 from-red-500">
             <Image src={'/Images/Logo.png'} alt="image-logo" width={500} height={150}/>
