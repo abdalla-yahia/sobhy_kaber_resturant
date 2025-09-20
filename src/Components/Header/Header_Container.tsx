@@ -96,7 +96,7 @@ export default function Header_Container({currentLocale}: {currentLocale: string
             <ul className="flex justify-center items-center gap-2 px-2 ">
               {/* <li className="hover:bg-secondary hover:text-white duration-100 p-2 rounded-full cursor-pointer font-[600]"><Link href="/order" >{t('order')}</Link></li> */}
               <li className="hover:bg-secondary hover:text-white duration-100 p-2 rounded-full cursor-pointer font-[600]"><Link href="/" >{t('home')}</Link></li>
-              <li className="hover:bg-secondary hover:text-white duration-100 p-2 rounded-full cursor-pointer font-[600]"><Link href="/menue" >{t('menue')}</Link></li>
+              <li className="hover:bg-secondary hover:text-white duration-100 p-2 rounded-full cursor-pointer font-[600]"><Link href="/menu" >{t('menue')}</Link></li>
               <li className="hover:bg-secondary hover:text-white duration-100 p-2 rounded-full cursor-pointer font-[600]"><Link href="/about" >{t('about')}</Link></li>
               <li className="hover:bg-secondary hover:text-white duration-100 p-2 rounded-full cursor-pointer font-[600]"><Link href="/contact" >{t('contact')}</Link></li>
             </ul>

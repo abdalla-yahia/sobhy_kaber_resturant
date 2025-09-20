@@ -22,9 +22,9 @@ export default async function LocaleLayout({children,params}:Props){
   const messages = await getMessages();
 
   return (
-            <NextIntlClientProvider locale={locale} messages={messages}>
-                {children}
-            </NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+            {children}
+        </NextIntlClientProvider>
   )
 }
 

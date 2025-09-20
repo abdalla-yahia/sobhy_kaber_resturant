@@ -50,7 +50,7 @@ export default function Login_User() {
                 <button onClick={() => LogoutUserHandler()} className='order-1 md:order-3 p-1 bg-primary text-white rounded cursor-pointer'>{t('logout')}</button>
               </div>
              {LogedUser?.user?.role === 'ADMIN' && <Link className='flex flex-col mx-[15px] justify-center items-center gap-1 text-center' href={LogedUser?.user?.role === 'ADMIN' ? '/dashboard/admins' : '/dashboard/users'}>
-                <CiSettings className='text-[25px] animate-spin' />
+                <CiSettings className='text-[25px]' />
                   <span className='hidden md:block uppercase text-[10px] font-[600] text-center w-[100%]'>{t('dashboard')}</span> 
                 {/* <span className=' uppercase text-[10px] text-center w-[50%]'> {t('admin')} */}
                   {/* </span> */}

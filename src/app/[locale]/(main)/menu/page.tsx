@@ -1,4 +1,4 @@
-import Menue_Container from "@/Components/Menue/Menue_Container";
+import Menue_Container from "@/Components/Menu/Menue_Container";
 
 export default function Menu_Page() {
   return (
