@@ -69,7 +69,7 @@ export default function Header_Container({currentLocale}: {currentLocale: string
   //Add Bg to header While Scroll 
  useEffect(() => {
   const header = document.querySelector('.header') as HTMLElement;
-  // header.style.boxShadow = "2px 2px 2px rgba(0,0,0,.1)";
+  header.style.boxShadow = "2px 2px 2px rgba(0,0,0,.1)";
   if( window.innerWidth < 767){
         header.style.backgroundColor = "#1aa384";
         header.style.boxShadow = "2px 2px 2px rgba(0,0,0,.1)";
@@ -95,9 +95,9 @@ export default function Header_Container({currentLocale}: {currentLocale: string
 }, []);
   return (
     <header className="header fixed top-0 left-0 w-full flex justify-center items-center z-50 text-primary ">
-      <div className="container w-full bg-inherit">
+      <div className="w-full md:w-[95%] bg-inherit flex justify-between items-center px-2">
         {/*Logo && Locale*/}
-        <div className="flex z-50 gap-4 bg-inherit justify-center items-center">
+        <div className="flex z-50 gap-0 bg-inherit justify-center items-center">
             {/*Logo*/}
             <Link href='/'>
               <Image priority src={'/Images/Logo.png'} className=" drop-shadow-xl" alt="logo" width={220} height={100}/>
@@ -121,7 +121,7 @@ export default function Header_Container({currentLocale}: {currentLocale: string
             </div>
         </div>
         {/*Login && NavList*/}
-        <div className="w-full flex bg-inherit gap-4 justify-between items-center ">
+        <div className="w-full flex bg-inherit gap-0 md:gap-4 justify-between items-center ">
           {/*Nav List*/}
           <nav style={{
             clipPath:toggleMenuLink && 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'||''

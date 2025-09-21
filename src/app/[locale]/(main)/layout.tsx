@@ -232,6 +232,4 @@ export default async function LocaleLayout({ children, params }: Props) {
   );
 }
 
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
-}
+

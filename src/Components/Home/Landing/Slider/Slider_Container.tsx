@@ -1,5 +1,6 @@
 'use client'
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react"
 import { MdOutlineKeyboardArrowRight, MdOutlineKeyboardArrowLeft} from "react-icons/md";
 
@@ -65,9 +66,9 @@ useEffect(()=>{
                                 {e.paragraph}
                             </p>
                             <div className="slider-button p-3  group duration-1000 ease-in-out w-[180px]">
-                                <button className="w-[180px] text-white p-1 border border-white whitespace-nowrap group-hover:border-transparent rounded cursor-pointer absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] z-50 hover:text-primary ease-in-out ">
+                                <Link href={e.href} className="w-[180px] text-white p-1 border border-white whitespace-nowrap group-hover:border-transparent rounded cursor-pointer absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] z-50 hover:text-primary ease-in-out ">
                                     {e.button}
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

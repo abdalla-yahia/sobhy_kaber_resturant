@@ -2,6 +2,7 @@ import Content_Container from "@/Components/Home/Content/Content_Container";
 import Landing_Container from "@/Components/Home/Landing/Landing_Container";
 import {use} from 'react';
 import {setRequestLocale} from 'next-intl/server';
+import { routing } from "@/i18n/routing";
 
 export default function HomePage({params}:{params:Promise<{locale:string}>}) {
     const {locale} = use(params);
@@ -16,3 +17,4 @@ export default function HomePage({params}:{params:Promise<{locale:string}>}) {
     </>
   )
 }
+
