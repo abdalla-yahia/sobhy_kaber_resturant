@@ -68,34 +68,34 @@ export default function Content_Container() {
         {/*Content Section*/}
         {/*Right*/}
         <div className="container">
-            <div className="container flex-col gap-5">
+            <div className="container flex-col gap-8">
                 <h2 className="section-title text-3xl font-bold">{sections('section1.title')}</h2>
-                <p className="section-text text-end">{sections('section1.paragraph')}</p>
+                <p className="section-text text-justify">{sections('section1.paragraph')}</p>
             </div>
             <Image className="section-image" src={'https://static.vecteezy.com/system/resources/previews/066/806/021/non_2x/fresh-cuts-of-raw-red-meat-with-herbs-for-culinary-use-and-cooking-free-png.png'} alt="content-image" width={450} height={450}/>
         </div>
         {/*Left*/}
         <div className="container">
             <Image className="section-image" src={'https://static.vecteezy.com/system/resources/previews/068/073/011/non_2x/wooden-soup-bowl-with-broth-and-warm-meal-free-png.png'} alt="content-image" width={450} height={450}/>
-            <div className="container flex-col gap-5">
+            <div className="container flex-col gap-8">
                 <h2 className="section-title text-3xl font-bold">{sections('section2.title')}</h2>
-                <p className="section-text text-end">{sections('section2.paragraph')}</p>
+                <p className="section-text text-justify">{sections('section2.paragraph')}</p>
             </div>
         </div>
         {/*Right*/}
         <div className="container">
-            <div className="container flex-col gap-5">
+            <div className="container flex-col gap-8">
                 <h2 className="section-title text-3xl font-bold">{sections('section3.title')}</h2>
-                <p className="section-text text-end">{sections('section3.paragraph')}</p>
+                <p className="section-text text-justify">{sections('section3.paragraph')}</p>
             </div>
             <Image className="section-image" src={'https://static.vecteezy.com/system/resources/previews/058/268/062/non_2x/delicious-gourmet-stew-in-a-black-pot-with-fresh-vegetables-and-herbs-free-png.png'} alt="content-image" width={450} height={450}/>
         </div>
         {/*Left*/}
         <div className="container">
             <Image className="section-image" src={'https://static.vecteezy.com/system/resources/previews/052/012/595/non_2x/delicious-bolognese-sauce-clipart-perfect-for-pasta-illustrations-free-png.png'} alt="content-image" width={450} height={450}/>
-            <div className="container flex-col gap-5">
+            <div className="container flex-col gap-8">
                 <h2 className="section-title text-3xl font-bold">{sections('section4.title')}</h2>
-                <p className="section-text text-end">{sections('section4.paragraph')}</p>
+                <p className="section-text text-justify">{sections('section4.paragraph')}</p>
             </div>
         </div>
     </section>

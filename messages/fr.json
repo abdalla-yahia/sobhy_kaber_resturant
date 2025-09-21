@@ -22,6 +22,11 @@
         "title": "Nos débuts modestes",
         "paragraph": "Tout a commencé par un petit chariot",
         "button": "Notre histoire"
+      },
+      "slider4": {
+        "title": "Les plats les plus savoureux",
+        "paragraph": "Goûtez les plats égyptiens et internationaux les plus délicieux",
+        "button": "Menu"
       }
     },
     "sections": {

@@ -22,6 +22,11 @@
                   "title": "Our Humble Beginning",
                   "paragraph": "It all started with a small cart",
                   "button": "Our Story"
+                },
+                "slider4": {
+                  "title": "The Tastiest Dishes",
+                  "paragraph": "Taste the most delicious Egyptian and international dishes",
+                  "button": "Menu"
                 }
               },
               "sections":{ 
