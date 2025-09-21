@@ -161,7 +161,7 @@ export default function NavigationMapWithVoice({ destination }: NavigationMapWit
           onClick={() => setNavigationStarted(true)}
           disabled={navigationStarted}
         >
-          {navigationStarted ? `${t('starttrip').split(' ')[1]}` : `${t('starttrip')}`}
+          {navigationStarted ? `${t('starttrip').split(' ').splice(1,).join(' ')}` : `${t('starttrip')}`}
         </button>
       </div>
 
