@@ -2,7 +2,9 @@ import {FiPhoneCall} from 'react-icons/fi'
 import {FaLocationDot} from 'react-icons/fa6'
 import {MdOutlineLocalPostOffice} from 'react-icons/md'
 import { useTranslations } from 'next-intl'
+import NavigationMapWithVoice from '@/Components/Map/RestaurantMap'
 export default function Contact_Page() {
+    const restaurantLocation = { lat: 30.084209360637615, lng: 31.234315211841356 };
   const t= useTranslations('contactpage')
   const tt = useTranslations('menuepage')
   return (
@@ -14,8 +16,7 @@ export default function Contact_Page() {
                 <p className=" text-[8px] md:text-[14px] font-[400]  text-center w-full" style={{lineHeight:'24px'}}>{t('header.sub_contact')}</p>
             </div>
       </div>
-     {/* <Image className="w-full h-[400px]" src="" alt="image-head" width={500} height={200}/> */}
-      
+        {/*Contact*/}      
      <section className="w-[90%] flex flex-col justify-center items-center gap-3 md:gap-9">
             {/*Contact*/}
             <div className="w-full flex justify-between items-center gap-2 md:gap-6">
@@ -75,6 +76,10 @@ export default function Contact_Page() {
                     <button type='submit' className='p-3 px-6 bg-primary rounded cursor-pointer text-white mr-auto'>{t('form.send')}</button>
                 </form>
             </div>
+      </section>
+      {/*Map*/}
+      <section className='w-full'>
+       <NavigationMapWithVoice destination={restaurantLocation}/>
       </section>
     </section>
   )

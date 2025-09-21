@@ -83,7 +83,7 @@ export default function Header_Container({currentLocale}: {currentLocale: string
               {toggle && <div  className="flex w-full  flex-col justify-between items-center gap-2 absolute top-[200%] left-[50%] -translate-x-[50%] bg-inherit">
                 {
                   AllLanguages?.Language?.map((lang)=>
-                  <span key={lang?.id} onClick={()=>{setLanguage(lang?.code as string);setToggle(false)}} className="hover:bg-primary hover:text-secondary px-3 cursor-pointer uppercase flex justify-between items-center gap-1 w-full">
+                  <span key={lang?.id} onClick={()=>{setLanguage(lang?.code as string);setToggle(false)}} className="hover:bg-primary hover:text-secondary px-3 cursor-pointer capitalize flex justify-between items-center gap-1 w-full">
                     {lang?.name}
                   <Image  src={lang?.flage} alt={`flag-${lang?.code}`} width={20} height={20}/>
                   </span>
@@ -100,7 +100,6 @@ export default function Header_Container({currentLocale}: {currentLocale: string
             clipPath:toggleMenuLink && 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'||''
           }} className={`${styles.navLinkswrapper} w-full`}>
             <ul className="w-full flex  flex-col md:flex-row justify-center items-center gap-2 px-2 ">
-              {/* <li className="hover:bg-secondary hover:text-white duration-100 p-2 rounded-full cursor-pointer font-[600]"><Link href="/order" >{t('order')}</Link></li> */}
               <li className="hover:bg-secondary hover:text-white duration-100 p-2 rounded-full cursor-pointer font-[600]"><Link onClick={()=>setToggleMenuLink(false)} href="/" >{t('home')}</Link></li>
               <li className="hover:bg-secondary hover:text-white duration-100 p-2 rounded-full cursor-pointer font-[600]"><Link onClick={()=>setToggleMenuLink(false)} href="/menu" >{t('menue')}</Link></li>
               <li className="hover:bg-secondary hover:text-white duration-100 p-2 rounded-full cursor-pointer font-[600]"><Link onClick={()=>setToggleMenuLink(false)} href="/about" >{t('about')}</Link></li>
