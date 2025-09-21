@@ -261,6 +261,16 @@
     "contact": "Contact",
     "developed": "Developed by ",
     "eng": "Eng /"
+  },
+  "notfound": {
+    "notfound": "Page not found",
+    "text": "The page you are trying to access does not exist. Please check the correct link",
+    "gohome": "Back to home"
+  },
+  "error": {
+    "error": "Something went wrong",
+    "tryagain": "Try again",
+    "reload": "Reload"
   }
 
 

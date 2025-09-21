@@ -260,6 +260,16 @@
     "contact": "Contatto",
     "developed": "Sviluppato da ",
     "eng": "Ing /"
+  },
+  "notfound": {
+    "notfound": "Pagina non trovata",
+    "text": "La pagina a cui stai tentando di accedere non esiste. Controlla il link corretto",
+    "gohome": "Torna alla home"
+  },
+  "error": {
+    "error": "Qualcosa è andato storto",
+    "tryagain": "Riprova",
+    "reload": "Ricarica"
   }
 
 

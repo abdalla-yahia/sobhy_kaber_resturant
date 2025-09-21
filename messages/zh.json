@@ -260,6 +260,16 @@
     "contact": "联系",
     "developed": "开发者：",
     "eng": "工程师 /"
+  },
+  "notfound": {
+    "notfound": "页面未找到",
+    "text": "您尝试访问的页面不存在，请检查正确的链接",
+    "gohome": "返回主页"
+  },
+  "error": {
+    "error": "发生错误",
+    "tryagain": "请再试一次",
+    "reload": "重新加载"
   }
 
 

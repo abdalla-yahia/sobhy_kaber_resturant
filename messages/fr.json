@@ -260,6 +260,16 @@
     "contact": "Contact",
     "developed": "Développé par ",
     "eng": "Ing /"
+  },
+  "notfound": {
+    "notfound": "Page introuvable",
+    "text": "La page que vous essayez d'accéder n'existe pas. Veuillez vérifier le lien correct",
+    "gohome": "Retour à l'accueil"
+  },
+  "error": {
+    "error": "Une erreur s'est produite",
+    "tryagain": "Réessayer",
+    "reload": "Recharger"
   }
 
 

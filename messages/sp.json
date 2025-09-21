@@ -261,6 +261,16 @@
     "contact": "Contacto",
     "developed": "Desarrollado por ",
     "eng": "Ing /"
+  },
+  "notfound": {
+    "notfound": "Página no encontrada",
+    "text": "La página a la que intenta acceder no existe. Verifique el enlace correcto",
+    "gohome": "Volver a inicio"
+  },
+  "error": {
+    "error": "Algo salió mal",
+    "tryagain": "Inténtalo de nuevo",
+    "reload": "Recargar"
   }
 
 

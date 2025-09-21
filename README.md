@@ -1,6 +1,6 @@
 # 🍽 Sobhy Kaber Restaurant Website
 
-![Website Preview](https://sobhy-kaber.vercel.app/)  
+[Website Preview](https://sobhy-kaber.vercel.app/)  
 
 **Sobhy Kaber Restaurant** is a modern, interactive restaurant website designed to provide an engaging and seamless experience for users. The site supports multiple languages and features interactive maps and a professional flipbook-style menu.
 
