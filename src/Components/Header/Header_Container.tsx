@@ -110,8 +110,8 @@ export default function Header_Container({currentLocale}: {currentLocale: string
               {toggle && <div  className="flex w-full  flex-col justify-between items-center gap-2 absolute top-[200%] left-[50%] -translate-x-[50%] bg-inherit">
                 {
                   AllLanguages?.Language?.map((lang)=>
-                  <span key={lang?.id} onClick={()=>{setLanguage(lang?.code as string);setToggle(false)}} className="hover:bg-primary line-clamp-1 hover:text-secondary px-1 cursor-pointer capitalize flex justify-between items-center gap-1 w-full">
-                    {lang?.name}
+                  <span key={lang?.id} onClick={()=>{setLanguage(lang?.code as string);setToggle(false)}} className="hover:bg-primary line-clamp-1 hover:text-secondary px-1 cursor-pointer uppercase flex justify-between items-center gap-1 w-full">
+                    {lang?.code}
                   <Image  src={lang?.flage} alt={`flag-${lang?.code}`} width={20} height={20}/>
                   </span>
                   
