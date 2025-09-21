@@ -7,19 +7,20 @@ import { RootState, useAppDispatch, useAppSelector } from "@/Libs/Store/Store";
 import { useEffect } from "react";
 import { getAllLanguagies } from "@/Features/Actions/LanguageActions";
 import { getAllTranslateCategory } from "@/Features/Actions/TranslateCategoryActions";
+import { useLocale } from "next-intl";
 
 export default function AdminsLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
     const { user } = useAppSelector((state: RootState) => state.user)
     const { category } = useAppSelector((state: RootState) => state.category)
     const dispatch = useAppDispatch()
-
+    const locale = useLocale()
   useEffect(() => {
     dispatch(getAllCategories())
     dispatch(getAllUsers())
     dispatch(getAllLanguagies())
     dispatch(getAllTranslateCategory())
     dispatch(getAllMeal())
-  }, [dispatch,user,category])
+  }, [dispatch,user,category,locale])
 
   return (
     <section className="w-full flex justify-center items-center mt-[40px]">
