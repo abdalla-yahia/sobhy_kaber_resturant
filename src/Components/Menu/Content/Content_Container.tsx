@@ -3,21 +3,31 @@ import Image from "next/image";
 import Link from "next/link";
 import HTMLFlipBook from "react-pageflip";
 import {MdCall,MdLocationOn} from 'react-icons/md'
-import { useLocale, useTranslations } from "next-intl";
+import { useFormatter, useLocale, useTranslations } from "next-intl";
 import { RootState, useAppSelector } from "@/Libs/Store/Store";
+import { currencyMap } from "@/Utils/Currency";
+import { useRef } from "react";
 
 export default function Content_Container() {
   const {AllCategories} = useAppSelector((state:RootState)=>state.category);
   const locale = useLocale()
   const t = useTranslations('menuepage')
+  const format = useFormatter()
+  const audioRef = useRef<HTMLAudioElement>(null)
+  //Get currency By Locale
+  const currency = currencyMap[locale].format;
 
+  //Play Sound Effect While Flip Page
+  const PlayAudioFlip = ()=>{
+    audioRef?.current?.play()
+  }
   return (
-    <section dir="rtl" className="w-full flex justify-center items-start gap-2 flex-wrap overflow-hidden">
+    <section dir={locale === 'ar' ? 'rtl':'ltr'} className="w-full flex justify-center items-start gap-2 flex-wrap overflow-hidden">
       {/*Content Menue*/}
       {AllCategories?.categories?.length > 0 &&
-      <HTMLFlipBook  width={400} height={600} drawShadow showCover={true} showPageCorners={true} className={"w-full h-full"} style={{}} startPage={0} size={"stretch"} minWidth={300} maxWidth={800} minHeight={400} maxHeight={1000} flippingTime={1500} usePortrait={true} startZIndex={0} autoSize={true} maxShadowOpacity={0} mobileScrollSupport={true} clickEventForward={false} useMouseEvents={true} swipeDistance={5} disableFlipByClick={false}>
+      <HTMLFlipBook onFlip={()=>PlayAudioFlip()} width={400} height={600} drawShadow showCover={true} showPageCorners={true} className={"w-full h-full"} style={{}} startPage={0} size={"stretch"} minWidth={300} maxWidth={800} minHeight={400} maxHeight={1000} flippingTime={1500} usePortrait={true} startZIndex={0} autoSize={true} maxShadowOpacity={0} mobileScrollSupport={true} clickEventForward={false} useMouseEvents={true} swipeDistance={5} disableFlipByClick={false}>
         {/*Menu Cover*/}
-            <div key={'cover'} className="w-full h-[150px] text-center relative flex flex-col p-1 justify-center items-center   bg-gradient-to-r to-orange-500 from-red-500">
+            <div key={'cover'} className={` w-full h-[150px] text-center relative flex flex-col p-1 justify-center items-center   bg-gradient-to-r to-orange-500 from-red-500`}>
             <Image src={'/Images/Logo.png'} className="text-center w-full" alt="image-logo" width={500} height={500}/>
             <p className="text-xl font-bold text-center">{t('front.title')}</p>
             <Image className="w-full absolute top-[70%] skew-y-[23deg]" src={'https://static.vecteezy.com/system/resources/previews/069/729/225/non_2x/delicious-grilled-kofta-kebabs-on-a-skewer-closeup-shot-of-juicy-meatballs-free-png.png'}  alt="Kofta" width={150} height={20}/>
@@ -28,33 +38,36 @@ export default function Content_Container() {
              <Image src={'/Images/Logo.png'} className="w-full" alt="image-logo" width={500} height={150}/>
               <Image className="w-full absolute top-[70%] skew-y-[23deg]" src={'https://static.vecteezy.com/system/resources/previews/069/729/225/non_2x/delicious-grilled-kofta-kebabs-on-a-skewer-closeup-shot-of-juicy-meatballs-free-png.png'}  alt="Kofta" width={150} height={20}/>
             </div>
-      {/*@To-Do Map-Categories*/}
-      {
-         AllCategories?.categories?.map((category)=>{
-        const title = category?.translations?.find(t=>t.LocalId === locale)?.name
-         return <div key={category?.id} className="text-black w-full bg-gradient-to-r from-amber-100 to-orange-200 flex flex-col justify-start items-center gap-3 p-5">
-          <h2 className="mb-4">&#x06DE;ــــــــــــــــــــــــــــــ {title ? title : category?.title} ــــــــــــــــــــــــــــــ &#x06DE;</h2>
-          <div className=" border border-primary rounded-lg my-4">
-            <ul className="w-full p-2 gap-3">
-              {
-                category?.meals?.map((meal)=>{
-                  const Mealtitle = meal?.translations?.find(t=>t.LocalId === locale)?.name;
-                
-                   return <li key={meal?.id} className="w-full flex justify-between items-center">
-                    <span>{meal?.price}L.E</span>
-                    <Link href={`/meals/${meal?.slug}`} className="text-[10px] ">{Mealtitle ? Mealtitle: meal?.title}</Link>
-                    {meal?.image && <Image src={meal?.image} alt={meal?.title as string} width={50} height={50}/> }
-                    </li>
-                }
-                )
+        {/*Map-Categories And Existes Meals*/}
+            {
+              AllCategories?.categories?.map((category)=>{
+              const title = category?.translations?.find(t=>t.LocalId === locale)?.name
+              return <div key={category?.id} className="text-black w-full bg-gradient-to-r from-amber-100 to-orange-200 flex flex-col justify-start items-center gap-3 p-5">
+                <h2 className="mb-4">&#x06DE;ــــــــــــــــــــــــــــــ {title ? title : category?.title} ــــــــــــــــــــــــــــــ &#x06DE;</h2>
+                <div className=" border border-primary rounded-lg my-4">
+                  <ul className="w-full p-2 gap-5">
+                    {
+                      category?.meals?.map((meal)=>{
+                        const Mealtitle = meal?.translations?.find(t=>t.LocalId === locale)?.name;
+                        const price =Math.ceil(meal?.price as number / currencyMap[locale].amount as number).toFixed(2)
+                        return <li key={meal?.id} className="w-full flex justify-between items-center px-3">
+                          {/*Meal Title & Image*/}
+                          <div className="flex justify-center items-center gap-4">
+                            {meal?.image && <Image src={meal?.image} alt={meal?.title as string} width={50} height={50}/> }
+                            <Link href={`/meals/${meal?.slug}`} className="text-[16px] ">{Mealtitle ? Mealtitle: meal?.title}</Link>
+                          </div>
+                          <span>{format.number(parseInt(price),{style: 'currency', currency})}</span>
+                          </li>
+                      }
+                      )
+                    }
+                  </ul>
+                </div>
+              {category?.image && <Image className=" absolute bottom-0 left-[50%] -translate-x-[50%]" src={category?.image } alt={category?.title as string|| 'Category-image'} width={180} height={180}/>}
+              </div> 
               }
-            </ul>
-          </div>
-        {category?.image && <Image className=" absolute bottom-0 left-[50%] -translate-x-[50%]" src={category?.image } alt={category?.title as string|| 'Category-image'} width={180} height={180}/>}
-        </div> 
-         }
-        )
-      }
+              )
+            }
         {/*Empty*/}
             <div className="text-black overflow-hidden w-full bg-gradient-to-r from-amber-100 to-orange-200 flex flex-col justify-start items-center gap-3 p-5">
              <Image src={'/Images/Logo.png'} alt="image-logo" width={500} height={150}/>
@@ -98,6 +111,7 @@ export default function Content_Container() {
             
       </HTMLFlipBook>
       }
+        <audio ref={audioRef} src={'/Audios/pageturn-102978.mp3'} className="hidden" controls/>
     </section>
   )
 }
