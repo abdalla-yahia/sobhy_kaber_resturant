@@ -106,11 +106,11 @@ export default function Content_Container() {
             </div>
             {/*Our Story*/}
             <div key={'our-story'} className="w-full text-white p-5 flex flex-col items-center justify-center text-3xl font-bold bg-gradient-to-b to-orange-500 from-red-500 ">
-                <div className="w-full h-full  flex flex-col px-5 gap-[70px] ">
+                <div className="w-full h-full  flex flex-col px-5 gap-[10px] md:gap-[70px] ">
                   {/*Header Title*/}
                   <h1 className="w-full text-3xl p-2 mb-2 text-center border-[30px] [border-image-slice:150] [border-image-source:url('https://static.vecteezy.com/system/resources/previews/031/401/309/non_2x/luxury-golden-rectangle-corner-certificate-border-pattern-line-photo-thai-frame-islamic-wedding-invitation-background-free-png.png')] ">{t('back.story.title')}</h1>
                   {/*Text Content*/}
-                  <p className="text-justify  [text-align-last:justify] text-xl" style={{lineHeight:'50px'}}>{t('back.story.description')}</p>
+                  <p className="text-justify  [text-align-last:justify] text-lg md:text-xl leading-[40px] md:leading-[50px]">{t('back.story.description')}</p>
                 </div>
             </div>
             

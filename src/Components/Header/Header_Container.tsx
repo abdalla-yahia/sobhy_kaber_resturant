@@ -66,8 +66,35 @@ export default function Header_Container({currentLocale}: {currentLocale: string
 
     }
   },[currentLocale])
+  //Add Bg to header While Scroll 
+ useEffect(() => {
+  const header = document.querySelector('.header') as HTMLElement;
+  // header.style.boxShadow = "2px 2px 2px rgba(0,0,0,.1)";
+  if( window.innerWidth < 767){
+        header.style.backgroundColor = "#1aa384";
+        header.style.boxShadow = "2px 2px 2px rgba(0,0,0,.1)";
+      }
+  const handleScroll = () => {
+    if (window.scrollY >= 50 && window.innerWidth > 767) {
+      header.style.backgroundColor = "#1aa384";
+      header.style.boxShadow = "2px 2px 2px rgba(0,0,0,.1)";
+    } else if( window.innerWidth < 767){
+       header.style.backgroundColor = "#1aa384";
+      header.style.boxShadow = "2px 2px 2px rgba(0,0,0,.1)";
+    }else {
+      header.style.backgroundColor = "transparent"; 
+      header.style.boxShadow = "none";
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll);
+
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+  };
+}, []);
   return (
-    <header className=" w-full flex justify-center items-center z-50 top-0 left-0 text-primary bg-secondary relative">
+    <header className="header fixed top-0 left-0 w-full flex justify-center items-center z-50 text-primary ">
       <div className="container w-full bg-inherit">
         {/*Logo && Locale*/}
         <div className="flex z-50 gap-4 bg-inherit justify-center items-center">

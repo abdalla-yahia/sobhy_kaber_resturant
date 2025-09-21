@@ -10,8 +10,8 @@ export default function MenuLayout({children}:{children: React.ReactNode}){
         dispatch(getAllCategories())
     },[dispatch])
     return(
-        <>
+        <section className="mt-[150px]">
         {children}
-        </>
+        </section>
     )
 }

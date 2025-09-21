@@ -58,10 +58,10 @@ useEffect(()=>{
                     <div key={e.id} className="w-full relative min-h-screen flex-shrink-0">
                         <div className="w-full absolute top-0 left-0 bg-black/50 min-h-screen flex-shrink-0"></div>
                         <div  className={`w-full flex-shrink-0 min-h-screen bg-center bg-cover flex flex-col justify-center ${e.id === 1 ? 'items-center': 'items-end'} px-20 gap-5`} style={{backgroundImage:`url(${e.image})`}}>
-                            <h2 className={` ${e.id === 2 ?'text-primary':'text-white'} z-50 text-[60px] font-extrabold w-[50%] ${e.id === 1 ? 'text-center':'text-end'}`}>
+                            <h2 className={` ${e.id === 2 ?'text-primary':'text-white'} z-50 text-[30px] md:text-[60px] font-extrabold w-[50%] ${e.id === 1 ? 'text-center':'text-end'}`}>
                                 {e.title}
                             </h2>
-                            <p className="text-[30px] z-50 text-white text-center" style={{letterSpacing:'10px'}}>
+                            <p className="text-[15px] md:text-[30px] z-50 text-white text-center" style={{letterSpacing:'10px'}}>
                                 {e.paragraph}
                             </p>
                             <div className="slider-button p-3  group duration-1000 ease-in-out w-[180px]">
@@ -78,8 +78,8 @@ useEffect(()=>{
         <div className="w-full flex justify-between items-center gap-2 absolute bottom-10 px-10">
             {/*Arrows*/}
             <div className="flex justify-between items-center">
-                <MdOutlineKeyboardArrowLeft onClick={()=>currentIndex >= 1 && setCurrentIndex(currentIndex - 1)} className={`${currentIndex < 1 ? 'text-gray-600 cursor-not-allowed':'text-white cursor-pointer'} text-[80px] font-light `}/>
-                <MdOutlineKeyboardArrowRight onClick={()=>currentIndex < slider?.length - 1 && setCurrentIndex(currentIndex + 1)} className={`${currentIndex === (slider?.length - 1) ? 'text-gray-600 cursor-not-allowed':'text-white cursor-pointer '} text-[80px] font-light`}/>
+                <MdOutlineKeyboardArrowLeft onClick={()=>currentIndex >= 1 && setCurrentIndex(currentIndex - 1)} className={`${currentIndex < 1 ? 'text-gray-600 cursor-not-allowed':'text-white cursor-pointer'} text-[40px] md:text-[80px] font-light `}/>
+                <MdOutlineKeyboardArrowRight onClick={()=>currentIndex < slider?.length - 1 && setCurrentIndex(currentIndex + 1)} className={`${currentIndex === (slider?.length - 1) ? 'text-gray-600 cursor-not-allowed':'text-white cursor-pointer '} text-[40px] md:text-[80px] font-light`}/>
             </div>
             {/*Indecator*/}
             <div className="flex justify-between items-center gap-2">

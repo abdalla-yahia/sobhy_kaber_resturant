@@ -1,6 +1,6 @@
 # 🍽 Sobhy Kaber Restaurant Website
 
-![Website Preview](link-to-screenshot-or-gif)  
+![Website Preview](https://sobhy-kaber.vercel.app/)  
 
 **Sobhy Kaber Restaurant** is a modern, interactive restaurant website designed to provide an engaging and seamless experience for users. The site supports multiple languages and features interactive maps and a professional flipbook-style menu.
 
@@ -21,7 +21,7 @@
 
 - **Frontend:** Next.js 15, React, TypeScript  
 - **Styling:** Tailwind CSS, CSS Modules  
-- **Interactive Maps:** Leaflet + OpenStreetMap (free alternative to Google Maps/HERE API)  
+- **Interactive Maps:** (free alternative to Google Maps API)  
 - **Multi-language Support:** JSON-based translation files with i18n (e.g., next-i18next or react-intl)  
 - **Interactive Menu:** React Page Flip / Custom Flipbook Component  
 - **Accessibility & RTL Support:** Full support for right-to-left layout for Arabic.  
@@ -48,7 +48,7 @@ root
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/your-username/sobhy-kaber-restaurant.git
+git clone https://github.com/abdalla-yahia/sobhy_kaber_resturant.git
 cd sobhy-kaber-restaurant 
 ```
 

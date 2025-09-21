@@ -10,9 +10,9 @@ export default function Footer_Container() {
     const tf = useTranslations('footer')
   return (
     <footer className="relative px-[50px] bg-secondary text-white flex flex-col justify-start items-start"> 
-        <div className="w-[90%] flex justify-between items-start mt-[80px]">
+        <div className="w-full md:w-[90%] flex flex-col-reverse md:flex-row justify-between items-start mt-[80px]">
                 {/*Contact*/} 
-                <div className="w-[50%] flex flex-col gap-4  h-fit">
+                <div className="w-full md:w-[50%] flex flex-col gap-4  h-fit">
                     {/*Form Content*/}
                         <div className='w-full flex flex-col justify-center items-center  rounded-xl'>
                             {/*Send Us*/}
@@ -46,14 +46,14 @@ export default function Footer_Container() {
                             </form>
                         </div>
                 </div>
-                {/*Nav List*/}
-                <div className="w-[50%] flex flex-col justify-end items-end gap-4  h-fit">
+                {/*Nav List && Logo*/}
+                <div className="w-full md:w-[50%] flex flex-row-reverse justify-between items-start md:flex-col md:justify-end md:items-end gap-4  h-fit">
                 {/*Logo*/}
                     <Link href='/'>
-                    <Image priority src={'/Images/Logo.png'} className=" drop-shadow-2xl" alt="logo" width={220} height={100}/>
+                    <Image priority src={'/Images/Logo.png'} className="drop-shadow-2xl" alt="logo" width={220} height={100}/>
                     </Link>
                     {/*Nav List*/}
-                    <ul className="w-full flex  flex-col justify-end items-end gap-2 px-8 ">
+                    <ul className="w-full flex  flex-col justify-start items-start md:justify-end md:items-end gap-2 px-8 ">
                         <li className="hover:bg-primary duration-100 p-2 rounded cursor-pointer font-[600]"><Link  href="/" >{tt('home')}</Link></li>
                         <li className="hover:bg-primary duration-100 p-2 rounded cursor-pointer font-[600]"><Link  href="/menu" >{tt('menue')}</Link></li>
                         <li className="hover:bg-primary duration-100 p-2 rounded cursor-pointer font-[600]"><Link  href="/about" >{tt('about')}</Link></li>
