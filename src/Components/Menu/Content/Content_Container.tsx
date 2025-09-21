@@ -43,7 +43,7 @@ export default function Content_Container() {
               AllCategories?.categories?.map((category)=>{
               const title = category?.translations?.find(t=>t.LocalId === locale)?.name
               return <div key={category?.id} className="text-black w-full bg-gradient-to-r from-amber-100 to-orange-200 flex flex-col justify-start items-center gap-3 p-5">
-                <h2 className="mb-4">&#x06DE;ــــــــــــــــــــــــــــــ {title ? title : category?.title} ــــــــــــــــــــــــــــــ &#x06DE;</h2>
+                <h2 className="mb-4">&#x06DE;ــــــــــــــــــــــــــــ {title ? title : category?.title} ــــــــــــــــــــــــــــ &#x06DE;</h2>
                 <div className=" border border-primary rounded-lg my-4">
                   <ul className="w-full p-2 gap-5">
                     {
@@ -63,7 +63,7 @@ export default function Content_Container() {
                     }
                   </ul>
                 </div>
-              {category?.image && <Image className=" absolute bottom-0 left-[50%] -translate-x-[50%] drop-shadow-xl drop-shadow-black" src={category?.image } alt={category?.title as string|| 'Category-image'} width={180} height={180}/>}
+              {category?.image && <Image className="hidden md:block absolute bottom-[10%] left-[50%] -translate-x-[50%] drop-shadow-xl drop-shadow-black" src={category?.image } alt={category?.title as string|| 'Category-image'} width={180} height={180}/>}
               </div> 
               }
               )

@@ -94,12 +94,12 @@ export default function Header_Container({currentLocale}: {currentLocale: string
   };
 }, []);
   return (
-    <header className="header fixed top-0 left-0 w-full flex justify-center items-center z-50 text-primary ">
-      <div className="w-full md:w-[95%] bg-inherit flex justify-between items-center px-2">
+    <header className="header  fixed top-0 min-h-[100px] left-0 w-full flex justify-center items-center z-50 text-primary ">
+      <div className="md:w-[95%] bg-inherit flex justify-between items-center px-2">
         {/*Logo && Locale*/}
-        <div className="flex z-50 gap-0 bg-inherit justify-center items-center">
+        <div className="flex w-[20%] z-50 gap-0 bg-inherit justify-center items-center">
             {/*Logo*/}
-            <Link href='/'>
+            <Link href='/' className="hidden md:block">
               <Image priority src={'/Images/Logo.png'} className=" drop-shadow-xl" alt="logo" width={220} height={100}/>
             </Link>
             {/*List Of Locale*/}
@@ -110,7 +110,7 @@ export default function Header_Container({currentLocale}: {currentLocale: string
               {toggle && <div  className="flex w-full  flex-col justify-between items-center gap-2 absolute top-[200%] left-[50%] -translate-x-[50%] bg-inherit">
                 {
                   AllLanguages?.Language?.map((lang)=>
-                  <span key={lang?.id} onClick={()=>{setLanguage(lang?.code as string);setToggle(false)}} className="hover:bg-primary hover:text-secondary px-3 cursor-pointer capitalize flex justify-between items-center gap-1 w-full">
+                  <span key={lang?.id} onClick={()=>{setLanguage(lang?.code as string);setToggle(false)}} className="hover:bg-primary line-clamp-1 hover:text-secondary px-1 cursor-pointer capitalize flex justify-between items-center gap-1 w-full">
                     {lang?.name}
                   <Image  src={lang?.flage} alt={`flag-${lang?.code}`} width={20} height={20}/>
                   </span>
@@ -121,11 +121,11 @@ export default function Header_Container({currentLocale}: {currentLocale: string
             </div>
         </div>
         {/*Login && NavList*/}
-        <div className="w-full flex bg-inherit gap-0 md:gap-4 justify-between items-center ">
+        <div className="w-[80%] flex bg-inherit gap-0 md:gap-4 justify-between items-center ">
           {/*Nav List*/}
           <nav style={{
             clipPath:toggleMenuLink && 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'||''
-          }} className={`${styles.navLinkswrapper} w-full`}>
+          }} className={`${styles.navLinkswrapper} w-[95%]`}>
             <ul className="w-full flex  flex-col md:flex-row justify-center items-center gap-2 px-2 ">
               <li className="hover:bg-secondary hover:text-white duration-100 p-2 rounded-full cursor-pointer font-[600]"><Link onClick={()=>setToggleMenuLink(false)} href="/" >{t('home')}</Link></li>
               <li className="hover:bg-secondary hover:text-white duration-100 p-2 rounded-full cursor-pointer font-[600]"><Link onClick={()=>setToggleMenuLink(false)} href="/menu" >{t('menue')}</Link></li>
@@ -136,14 +136,16 @@ export default function Header_Container({currentLocale}: {currentLocale: string
           {/*Login*/}
           <Login_User />
           {/*Toogle button*/}
-            {
-              toggleMenuLink ? (
-                <IoMdClose onClick={()=>setToggleMenuLink(!toggleMenuLink)} className="text-3xl font-bold transition-all duration-700 cursor-pointer block md:hidden "/>
-              ):
-              (
-                <CiMenuBurger onClick={()=>setToggleMenuLink(!toggleMenuLink)} className="text-3xl font-bold transition-all duration-700 cursor-pointer block md:hidden "/>
-              )
-            }
+          <div>
+              {
+                toggleMenuLink ? (
+                  <IoMdClose onClick={()=>setToggleMenuLink(!toggleMenuLink)} className="text-3xl font-bold transition-all duration-700 cursor-pointer block md:hidden "/>
+                ):
+                (
+                  <CiMenuBurger onClick={()=>setToggleMenuLink(!toggleMenuLink)} className="text-3xl font-bold transition-all duration-700 cursor-pointer block md:hidden "/>
+                )
+              }
+          </div>
         </div>
       </div>
     </header>
