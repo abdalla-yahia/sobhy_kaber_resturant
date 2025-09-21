@@ -243,7 +243,14 @@
           "email": "Email",
           "message": "Your Message",
           "send": "Send Message"
+        },
+        "map": {
+          "bicycle": "Bicycle",
+          "car": "Car",
+          "walk": "Walking",
+          "starttrip": "Start Trip"
         }
+
       },
       "aboutpage": {
         "header": "About Us",

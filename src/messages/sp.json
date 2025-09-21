@@ -244,6 +244,12 @@
       "email": "Correo electrónico",
       "message": "Tu mensaje",
       "send": "Enviar mensaje"
+    },
+    "map": {
+      "bicycle": "Bicicleta",
+      "car": "Coche",
+      "walk": "A pie",
+      "starttrip": "Iniciar viaje"
     }
   },
   "aboutpage": {

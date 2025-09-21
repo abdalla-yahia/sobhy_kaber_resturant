@@ -243,7 +243,13 @@
       "email": "E-mail",
       "message": "Votre message",
       "send": "Envoyer le message"
-    }
+    },
+    "map": {
+        "bicycle": "Vélo",
+        "car": "Voiture",
+        "walk": "À pied",
+        "starttrip": "Commencer le trajet"
+      }
   },
   "aboutpage": {
     "header": "Qui sommes-nous ?",

@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import {GoogleMap,Marker,DirectionsRenderer,useLoadScript,} from "@react-google-maps/api";
 import { FaCar, FaWalking, FaBicycle, FaPlus, FaMinus } from "react-icons/fa";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const containerStyle = {
   width: "100%",
@@ -18,6 +18,7 @@ export default function NavigationMapWithVoice({ destination }: NavigationMapWit
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || "",
   });
+  const t = useTranslations('contactpage.map')
   const locale = useLocale()
   const [userLocation, setUserLocation] = useState<{ lat: number; lng: number } | null>(null);
   const [directions, setDirections] = useState<google.maps.DirectionsResult | null>(null);
@@ -32,9 +33,9 @@ export default function NavigationMapWithVoice({ destination }: NavigationMapWit
   const spokenStepsRef = useRef<Set<number>>(new Set()); 
 
   const transportModes = [
-    { mode: "DRIVING", label: "سيارة", icon: <FaCar /> },
-    { mode: "WALKING", label: "سير", icon: <FaWalking /> },
-    { mode: "BICYCLING", label: "دراجة", icon: <FaBicycle /> },
+    { mode: "DRIVING", label: `${t('car')}`, icon: <FaCar /> },
+    { mode: "WALKING", label: `${t('walk')}`, icon: <FaWalking /> },
+    { mode: "BICYCLING", label: `${t('bicycle')}`, icon: <FaBicycle /> },
   ];
 
   // Text-to-Speech
@@ -160,7 +161,7 @@ export default function NavigationMapWithVoice({ destination }: NavigationMapWit
           onClick={() => setNavigationStarted(true)}
           disabled={navigationStarted}
         >
-          {navigationStarted ? "الرحلة بدأت" : "ابدأ الرحلة"}
+          {navigationStarted ? `${t('starttrip').split(' ')[1]}` : `${t('starttrip')}`}
         </button>
       </div>
 

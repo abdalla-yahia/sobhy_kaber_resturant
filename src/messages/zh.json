@@ -243,6 +243,12 @@
       "email": "电子邮件",
       "message": "您的留言",
       "send": "发送信息"
+    },
+    "map": {
+      "bicycle": "自行车",
+      "car": "汽车",
+      "walk": "步行",
+      "starttrip": "开始旅程"
     }
   },
   "aboutpage": {

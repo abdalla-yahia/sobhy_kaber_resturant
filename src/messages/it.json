@@ -243,6 +243,12 @@
       "email": "Email",
       "message": "Il tuo messaggio",
       "send": "Invia messaggio"
+    },
+    "map": {
+      "bicycle": "Bicicletta",
+      "car": "Auto",
+      "walk": "A piedi",
+      "starttrip": "Inizia il viaggio"
     }
   },
   "aboutpage": {
