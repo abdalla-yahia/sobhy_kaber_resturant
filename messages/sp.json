@@ -222,6 +222,29 @@
     "price": "Precio",
     "quantity": "Cantidad",
     "Calories": "Calorías"
+  },
+  "contactpage": {
+    "header": {
+      "contact": "Ponte en contacto",
+      "sub_contact": "Nos encantaría saber de ti.",
+      "location": "Visítanos en nuestra sucursal principal",
+      "phone": "Estamos disponibles toda la semana para atenderte",
+      "email": "Contáctanos en cualquier momento por correo electrónico"
+    },
+    "form": {
+      "send_us": "Envíanos",
+      "contact_text": "Contáctanos para todas tus preguntas y opiniones, o puedes resolver tus problemas en menos tiempo en nuestras oficinas de contacto.",
+      "name": "Nombre",
+      "phone": "Teléfono",
+      "email": "Correo electrónico",
+      "message": "Tu mensaje",
+      "send": "Enviar mensaje"
+    }
+  },
+  "aboutpage": {
+    "header": "¿Quiénes somos?",
+    "start": "Todo comenzó con un pequeño carrito",
+    "story": "Sobhy Kaber comenzó su viaje hace años con un pequeño carrito de comida que contenía ingredientes modestos y simples, pero su gran pasión por cocinar platos egipcios auténticos lo hizo destacar. Rápidamente ganó popularidad entre los egipcios gracias a su gran compromiso de ofrecer comidas que combinan sabor delicioso con alta calidad. Cumplió su gran sueño de presentar con orgullo la auténtica comida egipcia a nivel local e internacional, centrándose en preparar comidas tradicionales y transmitir el sabor egipcio único al mejor precio. Luego se expandió para tener su propia granja de ganado, asegurando la mejor calidad de productos e ingredientes de cocina utilizados en el restaurante, manteniendo así la experiencia única de la granja a la mesa. Sobhy Kaber está profundamente comprometido con la calidad de los ingredientes, la comida deliciosa y un excelente servicio para brindar una experiencia excepcional a los clientes. Esto le permitió expandirse y abrir muchas sucursales en Egipto y en varias regiones de Medio Oriente."
   }
 
 

@@ -4,11 +4,16 @@ import {Link, usePathname, useRouter} from '@/i18n/navigation';
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import Login_User from "./Login_User";
+import { CiMenuBurger } from "react-icons/ci";
+import { IoMdClose } from "react-icons/io";
+
+import styles from './style.module.css';
 
 export default function Header_Container({currentLocale}: {currentLocale: string}) {
   const [language,setLanguage] = useState(currentLocale)
   const [flag,setFlag] = useState('')
   const [toggle,setToggle] = useState(false)
+  const [toggleMenuLink,setToggleMenuLink] = useState(false)
   const t = useTranslations('header')
   const dropDownRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
@@ -54,8 +59,8 @@ export default function Header_Container({currentLocale}: {currentLocale: string
     }
   },[currentLocale])
   return (
-    <header className="parent z-50 top-0 left-0 text-primary bg-secondary">
-      <div className="container">
+    <header className="parent z-50 top-0 left-0 text-primary bg-secondary relative">
+      <div className="container bg-inherit">
         {/*Logo && Locale*/}
         <div className="flex z-50 gap-4 justify-center items-center">
           {/*Logo*/}
@@ -88,23 +93,35 @@ export default function Header_Container({currentLocale}: {currentLocale: string
               </div>}
             </div>
         </div>
-
         {/*Login && NavList*/}
-        <div className="flex gap-4 justify-center items-center">
+        <div className="flex-1 flex bg-inherit gap-4 justify-center items-center ">
           {/*Nav List*/}
-          <nav >
-            <ul className="flex justify-center items-center gap-2 px-2 ">
+          <nav style={{
+            clipPath:toggleMenuLink && 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'||''
+          }} className={`${styles.navLinkswrapper}`}>
+            <ul className="w-full flex  flex-col md:flex-row justify-center items-center gap-2 px-2 ">
               {/* <li className="hover:bg-secondary hover:text-white duration-100 p-2 rounded-full cursor-pointer font-[600]"><Link href="/order" >{t('order')}</Link></li> */}
-              <li className="hover:bg-secondary hover:text-white duration-100 p-2 rounded-full cursor-pointer font-[600]"><Link href="/" >{t('home')}</Link></li>
-              <li className="hover:bg-secondary hover:text-white duration-100 p-2 rounded-full cursor-pointer font-[600]"><Link href="/menu" >{t('menue')}</Link></li>
-              <li className="hover:bg-secondary hover:text-white duration-100 p-2 rounded-full cursor-pointer font-[600]"><Link href="/about" >{t('about')}</Link></li>
-              <li className="hover:bg-secondary hover:text-white duration-100 p-2 rounded-full cursor-pointer font-[600]"><Link href="/contact" >{t('contact')}</Link></li>
+              <li className="hover:bg-secondary hover:text-white duration-100 p-2 rounded-full cursor-pointer font-[600]"><Link onClick={()=>setToggleMenuLink(false)} href="/" >{t('home')}</Link></li>
+              <li className="hover:bg-secondary hover:text-white duration-100 p-2 rounded-full cursor-pointer font-[600]"><Link onClick={()=>setToggleMenuLink(false)} href="/menu" >{t('menue')}</Link></li>
+              <li className="hover:bg-secondary hover:text-white duration-100 p-2 rounded-full cursor-pointer font-[600]"><Link onClick={()=>setToggleMenuLink(false)} href="/about" >{t('about')}</Link></li>
+              <li className="hover:bg-secondary hover:text-white duration-100 p-2 rounded-full cursor-pointer font-[600]"><Link onClick={()=>setToggleMenuLink(false)} href="/contact" >{t('contact')}</Link></li>
             </ul>
           </nav>
           {/*Login*/}
           <Login_User />
+          {/*Toogle button*/}
+            {
+              toggleMenuLink ? (
+                <IoMdClose onClick={()=>setToggleMenuLink(!toggleMenuLink)} className="text-3xl font-bold transition-all duration-700 cursor-pointer block md:hidden "/>
+              ):
+              (
+                <CiMenuBurger onClick={()=>setToggleMenuLink(!toggleMenuLink)} className="text-3xl font-bold transition-all duration-700 cursor-pointer block md:hidden "/>
+              )
+            }
         </div>
       </div>
     </header>
   )
 }
+
+

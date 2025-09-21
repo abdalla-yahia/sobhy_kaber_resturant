@@ -221,7 +221,32 @@
         "price": "Price",
         "quantity": "Quantity",
         "Calories": "Calories"
-      }
+      },    
+      "contactpage": {
+        "header": {
+          "contact": "Get In Touch",
+          "sub_contact": "We’d love to hear from you.",
+          "location": "Visit us at our main branch",
+          "phone": "We’re available all week to serve you",
+          "email": "Reach us anytime via email"
+        },
+        "form": {
+          "send_us": "Send Us",
+          "contact_text": "Contact us for all your questions and opinions, or you can solve your problems in a shorter time with our contact offices.",
+          "name": "Name",
+          "phone": "Phone",
+          "email": "Email",
+          "message": "Your Message",
+          "send": "Send Message"
+        }
+      },
+      "aboutpage": {
+        "header": "About Us",
+        "start": "It all started with a small cart",
+        "story": "Sobhy Kaber began his journey years ago with a small food cart carrying modest and simple ingredients, but his great passion for cooking authentic Egyptian dishes made him stand out. He quickly gained immense popularity among Egyptians thanks to his deep commitment to engaging with them by offering meals that combine delicious taste with high quality. He achieved his big dream of proudly presenting authentic Egyptian food locally and globally by focusing on cooking traditional meals and delivering the unique Egyptian flavor at the best prices. He later expanded to own his own livestock farm to ensure the highest quality of products and cooking ingredients used in the restaurant, preserving the unique farm-to-table experience. Sobhy Kaber is deeply committed to ingredient quality, tasty food, and excellent service to provide an exceptional customer experience. This enabled him to expand and open many branches in Egypt and across various regions of the Middle East."
+      
+    }
+
 
 
 

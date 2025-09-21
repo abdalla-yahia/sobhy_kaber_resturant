@@ -221,7 +221,31 @@
     "price": "Prezzo",
     "quantity": "Quantità",
     "Calories": "Calorie"
+  },
+  "contactpage": {
+    "header": {
+      "contact": "Mettiti in contatto",
+      "sub_contact": "Saremmo felici di sentirti.",
+      "location": "Vieni a trovarci nella nostra sede principale",
+      "phone": "Siamo disponibili tutta la settimana per servirti",
+      "email": "Contattaci in qualsiasi momento via email"
+    },
+    "form": {
+      "send_us": "Inviaci",
+      "contact_text": "Contattaci per tutte le tue domande e opinioni, oppure puoi risolvere i tuoi problemi in meno tempo presso i nostri uffici di contatto.",
+      "name": "Nome",
+      "phone": "Telefono",
+      "email": "Email",
+      "message": "Il tuo messaggio",
+      "send": "Invia messaggio"
+    }
+  },
+  "aboutpage": {
+    "header": "Chi siamo?",
+    "start": "Tutto è iniziato con un piccolo carretto",
+    "story": "Sobhy Kaber ha iniziato il suo viaggio anni fa con un piccolo carretto di cibo contenente ingredienti modesti e semplici, ma la sua grande passione per cucinare piatti egiziani autentici lo ha distinto. Ha rapidamente guadagnato popolarità tra gli egiziani grazie al suo impegno nell'offrire pasti che combinano gusto delizioso e alta qualità. Ha realizzato il suo grande sogno di presentare con orgoglio il cibo egiziano autentico a livello locale e internazionale, concentrandosi sulla preparazione dei pasti tradizionali e offrendo l'unico sapore egiziano al miglior prezzo. Successivamente si è espanso possedendo la propria fattoria di bestiame per garantire la massima qualità dei prodotti e degli ingredienti utilizzati nel ristorante, preservando così l'esperienza unica dal campo alla tavola. Sobhy Kaber è profondamente impegnato nella qualità degli ingredienti, nel cibo delizioso e in un servizio eccellente per fornire un'esperienza eccezionale ai clienti. Questo gli ha permesso di espandersi e aprire molte filiali in Egitto e in varie regioni del Medio Oriente."
   }
+
 
   
 

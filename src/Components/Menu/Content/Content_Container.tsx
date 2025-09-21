@@ -75,8 +75,8 @@ export default function Content_Container() {
               <Image className="w-[70%] absolute top-[60%] left-[50%] -translate-x-[50%] drop-shadow-xl drop-shadow-black" src={'https://static.vecteezy.com/system/resources/previews/068/186/318/non_2x/delicious-grilled-meat-skewers-with-fresh-lettuce-tomatoes-and-red-onion-rings-isolated-on-transparent-background-free-png.png'}  alt="Kofta" width={150} height={20}/>
             </div>
             {/*Call Now*/}
-            <div key={'call-now'} className="w-full h-full text-center text-white pt-[90px]  bg-gradient-to-b from-orange-500 to-red-500 ">
-                <div className="w-full h-full  flex flex-col px-5 gap-[70px] ">
+            <div key={'call-now'} className="w-full h-full text-center text-white pt-[40px] md:pt-[90px]  bg-gradient-to-b from-orange-500 to-red-500 ">
+                <div className="w-full h-full  flex flex-col px-5 gap-[25px] md:gap-[65px] ">
                   {/*Header Title*/}
                   <h1 className="text-2xl relative text-center font-bold bg-amber-500  text-black rounded p-2 pr-9 mb-2">{t('back.advertis.title')}
                       <span className="bg-red-600 absolute top-[80%] right-0  rounded p-1 px-4 text-white">{t('back.advertis.free')}</span>

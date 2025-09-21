@@ -221,6 +221,29 @@
     "price": "Prix",
     "quantity": "Quantité",
     "Calories": "Calories"
+  },
+  "contactpage": {
+    "header": {
+      "contact": "Contactez-nous",
+      "sub_contact": "Nous serions ravis de vous entendre.",
+      "location": "Rendez-nous visite à notre siège principal",
+      "phone": "Nous sommes disponibles toute la semaine pour vous servir",
+      "email": "Contactez-nous à tout moment par email"
+    },
+    "form": {
+      "send_us": "Envoyez-nous",
+      "contact_text": "Contactez-nous pour toutes vos questions et opinions, ou vous pouvez résoudre vos problèmes plus rapidement grâce à nos bureaux de contact.",
+      "name": "Nom",
+      "phone": "Téléphone",
+      "email": "E-mail",
+      "message": "Votre message",
+      "send": "Envoyer le message"
+    }
+  },
+  "aboutpage": {
+    "header": "Qui sommes-nous ?",
+    "start": "Tout a commencé avec un petit chariot",
+    "story": "Sobhy Kaber a commencé son voyage il y a des années avec un petit chariot de nourriture contenant des ingrédients modestes et simples, mais sa grande passion pour la cuisine des plats égyptiens authentiques l’a distingué. Il a rapidement gagné en popularité parmi les Égyptiens grâce à son engagement à leur offrir des repas alliant goût délicieux et haute qualité. Il a réalisé son grand rêve de présenter fièrement la cuisine égyptienne authentique au niveau local et international en mettant l’accent sur la préparation des plats traditionnels et en offrant la saveur égyptienne unique aux meilleurs prix. Il a ensuite élargi ses activités en possédant sa propre ferme d’élevage pour garantir la meilleure qualité de produits et d’ingrédients utilisés dans le restaurant, préservant ainsi l’expérience unique du « de la ferme à la table ». Sobhy Kaber s’engage fortement à assurer la qualité des ingrédients, des plats savoureux et un excellent service afin d’offrir une expérience exceptionnelle aux clients. Cela lui a permis de s’étendre et d’ouvrir de nombreuses succursales en Égypte et dans diverses régions du Moyen-Orient."
   }
 
 
