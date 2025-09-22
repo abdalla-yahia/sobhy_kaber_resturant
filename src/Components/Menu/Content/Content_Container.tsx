@@ -22,7 +22,7 @@ export default function Content_Container() {
     audioRef?.current?.play()
   }
   return (
-    <section dir={locale === 'ar' ? 'rtl':'ltr'} className="w-full drop-shadow-2xl drop-shadow-black/40 flex justify-center items-start gap-2 my-5 flex-wrap overflow-hidden">
+    <section dir={locale === 'ar' ? 'rtl':'ltr'} className="w-full drop-shadow-2xl drop-shadow-black/40 flex justify-center items-start gap-2 my-5 flex-wrap">
       {/*Content Menue*/}
       {AllCategories?.categories?.length > 0 &&
       <HTMLFlipBook onFlip={()=>PlayAudioFlip()} width={400} height={600} drawShadow showCover={true} showPageCorners={true} className={""} style={{}} startPage={0} size={"stretch"} minWidth={300} maxWidth={800} minHeight={400} maxHeight={700} flippingTime={1500} usePortrait={true} startZIndex={0} autoSize={true} maxShadowOpacity={0} mobileScrollSupport={true} clickEventForward={false} useMouseEvents={true} swipeDistance={5} disableFlipByClick={false}>
