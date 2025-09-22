@@ -17,7 +17,7 @@ export default function Header_Container({currentLocale}: {currentLocale: string
         <div className="flex w-[50%] z-50 gap-0 bg-inherit justify-start items-center">
             {/*Logo*/}
             <Link href='/' className="">
-              <Image priority src={'/Images/Logo.png'} className=" drop-shadow-xl" alt="logo" width={180} height={100}/>
+              <Image priority src={'/Images/Logo.png'} className=" drop-shadow-xl" alt="logo" width={150} height={100}/>
             </Link>
             {/*List Of Locale*/}
             <div ref={dropDownRef}  onClick={()=>setToggle(!toggle)} className="relative flex-shrink-0 bg-inherit cursor-pointer flex flex-col justify-center items-center gap-1 w-fit">
