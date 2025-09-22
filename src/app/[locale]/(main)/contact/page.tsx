@@ -4,12 +4,13 @@ import {MdOutlineLocalPostOffice} from 'react-icons/md'
 import { useTranslations } from 'next-intl'
 import NavigationMapWithVoice from '@/Components/Map/RestaurantMap'
 export default function Contact_Page() {
-    const restaurantLocation = { lat: 30.084209360637615, lng: 31.234315211841356 };
+  const restaurantLocation = { lat: 30.084209360637615, lng: 31.234315211841356 };
   const t= useTranslations('contactpage')
   const tt = useTranslations('menuepage')
+  
   return (
-    <section className='parent flex-col mt-[180px]'>
-      <div className="w-full text-white h-[400px] flex justify-center items-center bg-fixed bg-no-repeat bg-center bg-[url('https://static.vecteezy.com/system/resources/previews/051/352/830/non_2x/blurry-background-of-restaurant-with-wooden-table-in-front-for-displaying-product-free-photo.jpg')]">
+    <section className='parent flex-col'>
+      <div className="w-full text-white h-[600px] flex justify-center items-center bg-fixed bg-no-repeat bg-center bg-[url('https://static.vecteezy.com/system/resources/previews/051/352/830/non_2x/blurry-background-of-restaurant-with-wooden-table-in-front-for-displaying-product-free-photo.jpg')]">
             {/*Header*/}
             <div className="w-[50%]  flex flex-col justify-center items-center text-center gap-5 ">
                <h1 className=" text-[20px] md:text-[40px] font-[400]" style={{lineHeight:'48px'}}>{t('header.contact')}</h1>
