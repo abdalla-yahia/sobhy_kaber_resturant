@@ -1,6 +1,6 @@
 
 export default function Logout() {
   return (
-    <div>Logout</div>
+    <div className="mt-[180px]">Logout</div>
   )
 }

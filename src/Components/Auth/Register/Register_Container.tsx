@@ -1,66 +1,14 @@
 'use client'
 import Link from "next/link";
-import { useActionState, useState } from "react";
-import { CreateUser } from "@/Interfaces/UserInterfaces";
-import { CreateUserValidation } from "@/Validations/UserValidations";
-import { toast } from "react-toastify";
-import { RootState, useAppDispatch, useAppSelector } from "@/Libs/Store/Store";
-import { createUser } from "@/Features/Actions/UsersActions";
-import { useRouter } from "next/navigation";
 import {FaRegEye,FaRegEyeSlash} from'react-icons/fa';
 import {LuLoader} from'react-icons/lu';
 import {IoMdCheckmark} from'react-icons/io';
-import { useTranslations } from "next-intl";
+import Register_Hook from "@/Hooks/Auth/Register_Hook";
 
 export default function Register_Container() {
-    const [isShow, setIsShow] = useState(false)
-    const [checkPasswordValid, setCheckPasswordValid] = useState('')
-    const [ConfirmPassword, setConfirmPassword] = useState('')
-    const { user, error, loading } = useAppSelector((state: RootState) => state.user)
-    const dispatch = useAppDispatch()
-    const router = useRouter()
-    const t = useTranslations('registerPage')
-    //Form Handller Function
-    const RegisterNewUser = (prevState: CreateUser, formData: FormData): CreateUser => {
-        const FormState = {
-            ...prevState,
-            name: formData.get('UserName') as string,
-            email: formData.get('UserEmail') as string,
-            password: formData.get('UserPassword') as string,
-            address: formData.get('UserAddress') as string,
-            phone: formData.get('UserPhone') as string,
-            gender: formData.get('UserGender') as string || undefined
-        }
-        //Check Validation Of Data 
-        const Validation = CreateUserValidation.safeParse(FormState)
-        if (!Validation?.success) {
-            toast.warning(Validation?.error?.issues?.map(e => e.message).join(', '))
-            return FormState as CreateUser;
-        }
-        //Check Matches Password
-        if (ConfirmPassword !== FormState?.password) {
-            toast.warn('Password Not Matches')
-            return FormState as CreateUser;
-        }
-        //Dispatch Data
-        dispatch(createUser(Validation?.data))
-        return FormState as CreateUser
-    }
-    //Initial State
-    const InitialState = {
-        name: '',
-        email: '',
-        password: '',
-        address: '',
-        phone: '',
-        gender: undefined
-    }
-    const [, ActionForm] = useActionState(RegisterNewUser, InitialState)
-    //Redirect User To Login Page
-    if (user?.user?.name) {
-        router.replace('/login')
-    }
-    return (
+   const {ActionForm,t,isShow,setIsShow,setCheckPasswordValid,checkPasswordValid,setConfirmPassword,user,error,loading} = Register_Hook()
+    
+   return (
         <div className='w-full md:w-[50%] flex flex-col justify-center items-center'>
             {/*Main Title*/}
             <h1 className="text-4xl text-primary my-[20px] font-[700]">{t('title')}</h1>

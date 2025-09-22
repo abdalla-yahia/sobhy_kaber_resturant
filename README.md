@@ -117,6 +117,13 @@ The supported languages are:
 
 - Supports dynamic content and multiple categories.
 
+## 🤖 AI Chatbot
+
+- Integrated an **AI-powered chatbot** to enhance user experience.  
+- The bot can **answer customer inquiries** such as menu details, prices, opening hours, and general restaurant information.  
+- Designed to respond in a **friendly and helpful tone**, supporting multiple languages.  
+- Built using free AI APIs to ensure fast responses and cost efficiency.  
+
 
  ## 📝 Additional Features
 

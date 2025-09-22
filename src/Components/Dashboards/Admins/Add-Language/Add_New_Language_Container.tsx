@@ -1,38 +1,11 @@
 'use client'
-import { SetStateAction, useActionState, useState } from "react";
+import Add_Language_Hook from '@/Hooks/Admins/Add_Language_Hook';
 import * as icon from '@/Utils/Icons';
-import { RootState, useAppDispatch, useAppSelector } from "@/Libs/Store/Store";
 import UploadOneImage from "@/Utils/UploadOneImage";
-import { useTranslations } from "next-intl";
-import { CreateLanguage } from "@/Interfaces/LanguageInterface";
-import { createLanguage } from "@/Features/Actions/LanguageActions";
+import { SetStateAction } from 'react';
 
 export default function Add_New_Language_Container() {
-  const [imageUrl, setImageUrl] = useState<string>('');
-  const { Language, error, loading } = useAppSelector((state: RootState) => state.language)
-  const t = useTranslations('dashboard.addnewLanguage')
-  const dispatch = useAppDispatch()
-  //Create Item Handler
-  const CreateItem = (prevState: CreateLanguage, formData: FormData): CreateLanguage => {
-    const formstate = {
-      ...prevState,
-      code: formData.get('LanguageCode') as string,
-      name: formData.get('LanguageName') as string,
-      flage: imageUrl
-    }
-console.log(formstate)
-    //Send Data 
-    dispatch(createLanguage(formstate))
-    return formstate
-  }
-  //Initial State
-  const InitialState = {
-    code: '',
-    name: '',
-    flage: ''
-  }
-
-  const [, ActionStat] = useActionState(CreateItem, InitialState)
+ const {t,ActionStat,imageUrl,setImageUrl,error,Language,loading} =Add_Language_Hook()
   return (
     <div className="w-full flex flex-col justify-start items-center gap-5 p-8">
       {/*Section Title*/}

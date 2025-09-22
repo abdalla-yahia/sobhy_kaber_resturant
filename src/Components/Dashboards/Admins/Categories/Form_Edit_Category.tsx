@@ -1,52 +1,13 @@
 'use client'
-import { useActionState, useState } from "react";
 import * as icon from '@/Utils/Icons';
-import { RootState, useAppDispatch, useAppSelector } from "@/Libs/Store/Store";
-import { UpdateCategoryValidation } from "@/Validations/CategoryValidation";
-import { toast } from "react-toastify";
-import { updateCategory } from "@/Features/Actions/CategoriesActions";
 import { UpdateCategory } from "@/Interfaces/CategoryInterface";
 import UploadOneImage from "@/Utils/UploadOneImage";
-import { clearCategory } from "@/Features/Slices/CategoriesSlice";
-import { useTranslations } from "next-intl";
+import Form_Edit_Category_Hook from '@/Hooks/Admins/Form_Edit_Category_Hook';
 
 export default function Edit_Category_Form({ Category, setIsToggle }: { Category: UpdateCategory, setIsToggle: (arg0: boolean) => void }) {
-  const [imageUrl, setImageUrl] = useState<string>(Category?.image as string);
-  const { category: EditCategory, error, loading } = useAppSelector((state: RootState) => state.category)
-  const t= useTranslations('dashboard.addnewcategory')
-  const dispatch = useAppDispatch()
-  //Create Item Handler
-  const UpdateItem = (prevState: UpdateCategory, formData: FormData): UpdateCategory => {
-    const formstate = {
-      ...prevState,
-      id: Category?.id,
-      title: formData.get('CategoryTitle') as string || Category?.title,
-      description: formData.get('CategoryDescription') as string || Category?.description,
-      image: formData.get('CategoryUrl') as string || imageUrl,
-    }
-    //Check Validation 
-    const Validation = UpdateCategoryValidation?.safeParse(formstate)
-    if (!Validation?.success) {
-      toast.warning(Validation?.error?.issues?.map(e => e?.message)?.join(', '))
-      return formstate;
-    }
-    //Send Data 
-    dispatch(updateCategory(formstate))
-    return formstate
-  }
-  //Initial State
-  const InitialState = {
-    id: Category?.id,
-    title: Category?.title,
-    description: Category?.description,
-    image: Category?.image,
-  }
-
-  const [, ActionStat] = useActionState(UpdateItem, InitialState)
-  if (EditCategory?.category?.title) {
-    setIsToggle(false)
-    dispatch(clearCategory())
-  }
+  
+  const {t,ActionStat,imageUrl,setImageUrl,error,EditCategory,loading} = Form_Edit_Category_Hook({ Category, setIsToggle })
+  
   return (
     <div className="w-[50%] absolute -top-[100%] bg-[#ddd] rounded left-0 flex flex-col justify-start items-center gap-5 p-8">
       {/*Close Form*/}

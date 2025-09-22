@@ -15,7 +15,7 @@ export default function Meal_Details_Container({slug}:{slug:string}) {
     const title = Meal?.Meal?.translations?.find(t=>t.LocalId === locale)?.name
     const t= useTranslations('mealDetails')
   return (
-    <section className="parent flex-col mt-5">
+    <section className="parent flex-col mt-[180px]">
         <h1 className="text-5xl font-bold">{title ? title : Meal?.Meal?.title}</h1>
         <div className="w-[90%] flex justify-start items-center gap-8">
             {/*Image*/}

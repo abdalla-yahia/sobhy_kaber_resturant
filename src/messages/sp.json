@@ -48,7 +48,11 @@
         "title": "Una experiencia familiar llena de recuerdos",
         "paragraph": "Nuestro restaurante no es solo un lugar para comer, sino un espacio para reunirse con la familia y amigos y celebrar los mejores momentos. Ofrecemos salones privados y un ambiente adecuado para todas las ocasiones."
       }
-    }
+    },
+    "chat": {
+    "send": "Enviar",
+    "askme": "Pregúntame lo que quieras"
+  }
   },
   "loginPage": {
   "title": "Iniciar sesión",

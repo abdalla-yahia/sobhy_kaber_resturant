@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function About_Page() {
   const t = useTranslations('aboutpage')
   return (
-    <section className="parent flex-col">
+    <section className="parent flex-col mt-[180px]">
       <div className="w-full text-white h-[400px] flex justify-center items-center bg-fixed bg-no-repeat bg-center bg-[url('https://static.vecteezy.com/system/resources/previews/032/579/943/non_2x/three-plates-with-food-on-them-in-front-of-a-blurry-background-ai-generated-free-photo.jpg')]">
             {/*Header*/}
             <div className="w-[50%]  flex flex-col justify-center items-center text-center gap-5 ">

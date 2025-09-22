@@ -11,11 +11,9 @@ import Link from 'next/link';
 import { useLocale } from 'next-intl';
 
 export default function Category_Content({ Category }: { Category: UpdateCategory }) {
-  const {AllTranslateCategory} = useAppSelector((state:RootState)=>state.translatecategory)
   const [isToggle, setIsToggle] = useState(false)
   const locale = useLocale()
   const dispatch = useAppDispatch()
-  console.log(AllTranslateCategory)
   //Delete Category Handler By Id
   const DeleteHandler = (id: string) => {
     swal({

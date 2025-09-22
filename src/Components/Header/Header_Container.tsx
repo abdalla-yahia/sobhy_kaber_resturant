@@ -1,111 +1,28 @@
 'use client'
 import Image from "next/image";
-import {Link, usePathname, useRouter} from '@/i18n/navigation';
-import { useTranslations } from "next-intl";
-import { useEffect, useRef, useState } from "react";
+import {Link} from '@/i18n/navigation';
 import Login_User from "./Login_User";
 import { CiMenuBurger } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
 import styles from './style.module.css';
-import { RootState, useAppDispatch, useAppSelector } from "@/Libs/Store/Store";
-import { getAllLanguagies } from "@/Features/Actions/LanguageActions";
+import HeaderHook from "@/Hooks/Header/Header_Hook";
 
 export default function Header_Container({currentLocale}: {currentLocale: string}) {
-  const {AllLanguages} = useAppSelector((state:RootState)=>state.language)
-  const [language,setLanguage] = useState(currentLocale)
-  const [flag,setFlag] = useState('')
-  const [toggle,setToggle] = useState(false)
-  const [toggleMenuLink,setToggleMenuLink] = useState(false)
-  const t = useTranslations('header')
-  const dropDownRef = useRef<HTMLDivElement>(null);
-  const router = useRouter();
-  const pathname = usePathname();
-
-  const dispatch = useAppDispatch()
-  //Get All Locale Existes
-  useEffect(()=>{
-    dispatch(getAllLanguagies())
-  },[dispatch])
-  //Close DropDown If User Click On Body
-  useEffect(()=>{
-    function ClickOutSideDropDownHandler(e: MouseEvent) {
-      if (!dropDownRef?.current?.contains(e.target as Node)) {
-        setToggle(false);
-      }
-    }
-    window.addEventListener("click", ClickOutSideDropDownHandler);
-    return () => window.removeEventListener("click", ClickOutSideDropDownHandler);
-  },[])
-  //Change PathName After Select Language
-  useEffect(()=>{
-    router.replace(pathname, {locale: language});
-  },[language])
-  //Set Flag Of Country
-  useEffect(()=>{
-    switch(currentLocale){
-        case "ar":
-        setFlag('https://static.vecteezy.com/system/resources/previews/001/952/861/non_2x/egypt-flag-isolate-banner-print-illustration-eps-vector.jpg')
-         break;
-        case "en":
-        setFlag('https://static.vecteezy.com/system/resources/previews/002/417/819/non_2x/illustration-of-the-united-kingdom-flag-free-vector.jpg')
-         break;
-        case "fr":
-        setFlag('https://static.vecteezy.com/system/resources/previews/004/313/578/non_2x/france-country-flag-free-vector.jpg')
-         break;
-        case "sp":
-        setFlag('https://static.vecteezy.com/system/resources/previews/009/767/106/non_2x/spain-flag-flag-of-spain-illustration-free-vector.jpg')
-         break;
-        case "it":
-        setFlag('https://static.vecteezy.com/system/resources/previews/002/417/790/non_2x/vectorial-illustration-of-the-italian-flag-free-vector.jpg')
-         break;
-        case "zh":
-        setFlag('https://static.vecteezy.com/system/resources/previews/002/133/523/non_2x/chinese-flag-official-chinese-flag-with-original-color-and-size-proportion-free-vector.jpg')
-         break;
-        default:
-        setFlag('https://static.vecteezy.com/system/resources/previews/001/952/861/non_2x/egypt-flag-isolate-banner-print-illustration-eps-vector.jpg')
-
-    }
-  },[currentLocale])
-  //Add Bg to header While Scroll 
- useEffect(() => {
-  const header = document.querySelector('.header') as HTMLElement;
-  header.style.boxShadow = "2px 2px 2px rgba(0,0,0,.1)";
-  if( window.innerWidth < 767){
-        header.style.backgroundColor = "#1aa384";
-        header.style.boxShadow = "2px 2px 2px rgba(0,0,0,.1)";
-      }
-  const handleScroll = () => {
-    if (window.scrollY >= 50 && window.innerWidth > 767) {
-      header.style.backgroundColor = "#1aa384";
-      header.style.boxShadow = "2px 2px 2px rgba(0,0,0,.1)";
-    } else if( window.innerWidth < 767){
-       header.style.backgroundColor = "#1aa384";
-      header.style.boxShadow = "2px 2px 2px rgba(0,0,0,.1)";
-    }else {
-      header.style.backgroundColor = "transparent"; 
-      header.style.boxShadow = "none";
-    }
-  };
-
-  window.addEventListener('scroll', handleScroll);
-
-  return () => {
-    window.removeEventListener('scroll', handleScroll);
-  };
-}, []);
+  const  {language,AllLanguages,setLanguage,flag,setToggle,toggle,setToggleMenuLink,toggleMenuLink,t,dropDownRef} = HeaderHook({currentLocale})
+  
   return (
     <header className="header  fixed top-0 min-h-[100px] left-0 w-full flex justify-center items-center z-50 text-primary ">
-      <div className="md:w-[95%] bg-inherit flex justify-between items-center px-2">
+      <div className="md:w-[95%] bg-inherit flex justify-between items-center px-2 gap-3">
         {/*Logo && Locale*/}
-        <div className="flex w-[20%] z-50 gap-0 bg-inherit justify-center items-center">
+        <div className="flex w-[50%] z-50 gap-0 bg-inherit justify-start items-center">
             {/*Logo*/}
-            <Link href='/' className="hidden md:block">
-              <Image priority src={'/Images/Logo.png'} className=" drop-shadow-xl" alt="logo" width={220} height={100}/>
+            <Link href='/' className="">
+              <Image priority src={'/Images/Logo.png'} className=" drop-shadow-xl" alt="logo" width={180} height={100}/>
             </Link>
             {/*List Of Locale*/}
-            <div ref={dropDownRef} onClick={()=>setToggle(!toggle)} className="relative bg-inherit cursor-pointer flex flex-col justify-center items-center gap-1 w-full">
+            <div ref={dropDownRef}  onClick={()=>setToggle(!toggle)} className="relative flex-shrink-0 bg-inherit cursor-pointer flex flex-col justify-center items-center gap-1 w-fit">
               <p className="border uppercase p-1 flex justify-between items-center gap-1">{language === 'ar'?'ع':language}
-              <Image  src={flag} alt={`flag-${language}`} width={20} height={20}/>
+              <Image loading="lazy" src={flag||'https://static.vecteezy.com/system/resources/previews/001/952/861/non_2x/egypt-flag-isolate-banner-print-illustration-eps-vector.jpg'} alt={`flag-${language}`} width={20} height={20}/>
               </p>
               {toggle && <div  className="flex w-full  flex-col justify-between items-center gap-2 absolute top-[200%] left-[50%] -translate-x-[50%] bg-inherit">
                 {
@@ -121,9 +38,9 @@ export default function Header_Container({currentLocale}: {currentLocale: string
             </div>
         </div>
         {/*Login && NavList*/}
-        <div className="w-[80%] flex bg-inherit gap-0 md:gap-4 justify-between items-center ">
+        <div className="w-[50%] bg-inherit flex gap-0 md:gap-4 justify-center md:justify-between items-center ">
           {/*Nav List*/}
-          <nav style={{
+          <nav  style={{
             clipPath:toggleMenuLink && 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'||''
           }} className={`${styles.navLinkswrapper} w-[95%]`}>
             <ul className="w-full flex  flex-col md:flex-row justify-center items-center gap-2 px-2 ">

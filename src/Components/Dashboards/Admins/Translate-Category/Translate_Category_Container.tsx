@@ -1,40 +1,11 @@
 'use client'
-import { useActionState } from "react";
-import * as icon from '@/Utils/Icons';
-import { RootState, useAppDispatch, useAppSelector } from "@/Libs/Store/Store";
-import { UpdateCategory } from "@/Interfaces/CategoryInterface";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { createTranslateCategory } from "@/Features/Actions/TranslateCategoryActions";
-import { CreateTranslateCategory } from "@/Interfaces/TranslateCategoryInterface";
+import * as icon from '@/Utils/Icons';
+import { UpdateCategory } from "@/Interfaces/CategoryInterface";
+import Translate_Category_Hook from "@/Hooks/Admins/Translate_Category_Hook";
 
 export default function Translate_Category_Container() {
-  const { category, error, loading } = useAppSelector((state: RootState) => state.category)
-  const { AllCategories } = useAppSelector((state: RootState) => state.category)
-  const { AllLanguages } = useAppSelector((state: RootState) => state.language)
-  const t = useTranslations('dashboard.translateCategory')
-  const dispatch = useAppDispatch()
-  //Create Item Handler
- const CreateItem = (prevState: CreateTranslateCategory, formData: FormData): CreateTranslateCategory => {
-  const categoryId = formData.get('CategoryId') as string;
-
-  const translations = AllLanguages?.Language?.map((language) => ({
-    name: formData.get(`CategoryTitle_${language.code}`) as string,
-    description: formData.get(`CategoryDescription_${language.code}`) as string,
-    categoryId: categoryId,
-    LocalId: language.code
-  })) || [];
-
-
-  dispatch(createTranslateCategory({ translations }));
-  return prevState;
-};
-  //Initial State
-  const InitialState: CreateTranslateCategory = {
-    translations: []
-  };
-
-  const [, ActionStat] = useActionState(CreateItem, InitialState)
+  const {t,ActionStat,AllLanguages,AllCategories,error,category,loading} = Translate_Category_Hook()
   return (
     <div className="w-full flex flex-col justify-start items-center gap-5 p-8">
       {/*Section Title*/}

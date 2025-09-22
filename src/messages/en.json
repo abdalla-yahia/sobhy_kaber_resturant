@@ -48,7 +48,11 @@
                     "title": "A Family Experience Full of Memories",
                     "paragraph": "Our restaurant is more than just a place to eat – it’s a space for families and friends to gather and celebrate special moments. We provide private halls and an environment suitable for all occasions, ensuring you create unforgettable memories with your loved ones."
                   }
-              }
+              },
+              "chat": {
+                  "send": "Send",
+                  "askme": "Ask me anything"
+                }
           },
       "loginPage": {
   "title": "Login",

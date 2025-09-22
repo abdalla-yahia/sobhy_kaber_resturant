@@ -1,45 +1,12 @@
 'use client'
-import { useActionState, useState } from "react"
-import Link from "next/link";
-import { RootState, useAppDispatch, useAppSelector } from "@/Libs/Store/Store";
-import { CreateUserValidation } from "@/Validations/UserValidations";
-import { toast } from "react-toastify";
-import { loginUser } from "@/Features/Actions/AuthActions";
-import { UserLogineInterface } from "@/Interfaces/UserInterfaces";
 import {FaRegEye,FaRegEyeSlash} from'react-icons/fa';
 import {LuLoader} from'react-icons/lu';
-import { useTranslations } from "next-intl";
+import Link from "next/link";
+import Login_Hook from '@/Hooks/Auth/Login_Hook';
 
 export default function Login_Container() {
-    const { LogedUser, error, loading } = useAppSelector((state: RootState) => state.auth)
-    const dispatch = useAppDispatch()
-    const [isShow, setIsShow] = useState(false)
-    const t = useTranslations('loginPage')
-    //Form Login 
-    const UserLogin = (prevState: UserLogineInterface, formData: FormData): UserLogineInterface => {
-        const formState = {
-            ...prevState,
-            email: formData.get('UserEmail') as string,
-            password: formData.get('UserPassword') as string
-        }
-        //Check Validation 
-        const PickData = CreateUserValidation?.pick({ email: true, password: true })
-        const Validation = PickData?.safeParse(formState)
-
-        if (!Validation?.success) {
-            toast.warning(Validation?.error?.issues?.map(e => e.message).join(', '))
-            return formState;
-        }
-        // Dispatch Data
-        dispatch(loginUser(Validation?.data))
-        return formState
-    }
-    const InitalState = {
-        email: '',
-        password: ''
-    }
-    const [, ActionState] = useActionState(UserLogin, InitalState)
-
+   const {ActionState,isShow,setIsShow,LogedUser,error,loading,t} = Login_Hook();
+   
     return (
         <div className='w-full md:w-[50%] flex flex-col justify-center items-center'>
             {/*Main Title*/}

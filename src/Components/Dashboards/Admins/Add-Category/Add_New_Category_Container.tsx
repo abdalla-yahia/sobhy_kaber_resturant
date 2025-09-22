@@ -1,45 +1,11 @@
 'use client'
-import { SetStateAction, useActionState, useState } from "react";
-import * as icon from '@/Utils/Icons';
-import { RootState, useAppDispatch, useAppSelector } from "@/Libs/Store/Store";
-import { CreateCategory } from "@/Interfaces/CategoryInterface";
-import { CreateCategoryValidation } from "@/Validations/CategoryValidation";
-import { toast } from "react-toastify";
-import { createCategory } from "@/Features/Actions/CategoriesActions";
 import UploadOneImage from "@/Utils/UploadOneImage";
-import { useTranslations } from "next-intl";
+import * as icon from '@/Utils/Icons';
+import Add_Category_Hook from "@/Hooks/Admins/Add_Category_Hook";
+import { SetStateAction } from "react";
 
 export default function Add_New_Category_Container() {
-  const [imageUrl, setImageUrl] = useState<string>('');
-  const { category, error, loading } = useAppSelector((state: RootState) => state.category)
-  const t = useTranslations('dashboard.addnewcategory')
-  const dispatch = useAppDispatch()
-  //Create Item Handler
-  const CreateItem = (prevState: CreateCategory, formData: FormData): CreateCategory => {
-    const formstate = {
-      ...prevState,
-      title: formData.get('CategoryTitle') as string,
-      description: formData.get('CategoryDescription') as string,
-      image: imageUrl
-    }
-    //Check Validation 
-    const Validation = CreateCategoryValidation.safeParse(formstate)
-    if (!Validation?.success) {
-      toast.warning(Validation?.error?.issues?.map(e => e?.message)?.join(', '))
-      return formstate;
-    }
-    //Send Data 
-    dispatch(createCategory(Validation?.data))
-    return formstate
-  }
-  //Initial State
-  const InitialState = {
-    title: '',
-    description: '',
-    image: ''
-  }
-
-  const [, ActionStat] = useActionState(CreateItem, InitialState)
+  const {t,ActionStat,imageUrl,setImageUrl,error,category,loading,} = Add_Category_Hook()
   return (
     <div className="w-full flex flex-col justify-start items-center gap-5 p-8">
       {/*Section Title*/}

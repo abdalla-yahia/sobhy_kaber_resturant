@@ -8,7 +8,7 @@ export default function Contact_Page() {
   const t= useTranslations('contactpage')
   const tt = useTranslations('menuepage')
   return (
-    <section className='parent flex-col'>
+    <section className='parent flex-col mt-[180px]'>
       <div className="w-full text-white h-[400px] flex justify-center items-center bg-fixed bg-no-repeat bg-center bg-[url('https://static.vecteezy.com/system/resources/previews/051/352/830/non_2x/blurry-background-of-restaurant-with-wooden-table-in-front-for-displaying-product-free-photo.jpg')]">
             {/*Header*/}
             <div className="w-[50%]  flex flex-col justify-center items-center text-center gap-5 ">

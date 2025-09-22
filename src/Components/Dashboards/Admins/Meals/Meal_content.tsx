@@ -5,9 +5,7 @@ import Link from "next/link";
 import { useLocale } from "next-intl";
 
 export default function Meal_content({ Meal }: { Meal: UpdateMeal }) {
-
   const locale = useLocale()
-
   const title = Meal?.translations?.find(t=>t.LocalId === locale)?.name
   const CategoryTranslateTitle = Meal?.category?.translations?.find(t=>t.LocalId === locale)?.name
 

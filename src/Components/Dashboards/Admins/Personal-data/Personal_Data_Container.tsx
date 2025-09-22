@@ -1,27 +1,13 @@
 'use client'
+import Personal_Data_Hook from "@/Hooks/Admins/Personal_Data_Hook";
 import Image from "next/image";
-import { useEffect } from "react";
-import { RootState, useAppDispatch, useAppSelector } from "@/Libs/Store/Store";
-import { loggedUser } from "@/Features/Actions/AuthActions";
-import { getUserById } from "@/Features/Actions/UsersActions";
-import { useTranslations } from "next-intl";
+
 
 export default function Personal_Data_Container() {
-  const { LogedUser } = useAppSelector((state: RootState) => state.auth)
-  const { user } = useAppSelector((state: RootState) => state.user)
-  const t=useTranslations('dashboard.personaldata')
-  const dispatch = useAppDispatch()
-  useEffect(() => {
-    dispatch(loggedUser())
-  }, [dispatch])
-  //Get Data Of User
-  useEffect(() => {
-    if (LogedUser?.user?.id)
-      dispatch(getUserById(LogedUser?.user?.id as string))
-  }, [LogedUser?.user?.id, dispatch])
+  const {user,t} = Personal_Data_Hook()
+  
   return (
     <div className="w-full p-5 ">
-
       {/*User Information*/}
       <div className="w-full p-5 flex flex-col justify-between items-start gap-2">
         {/*Image And Name*/}

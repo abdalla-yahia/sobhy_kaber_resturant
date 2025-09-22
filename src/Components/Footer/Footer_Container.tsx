@@ -9,7 +9,7 @@ export default function Footer_Container() {
     const tt = useTranslations('header')
     const tf = useTranslations('footer')
   return (
-    <footer className="relative px-[50px] bg-secondary text-white flex flex-col justify-start items-start"> 
+    <footer className="w-full relative px-[10px] md:px-[50px] bg-secondary text-white flex flex-col justify-start items-start"> 
         <div className="w-full md:w-[90%] flex flex-col-reverse md:flex-row justify-between items-start mt-[80px]">
                 {/*Contact*/} 
                 <div className="w-full md:w-[50%] flex flex-col gap-4  h-fit">
@@ -21,9 +21,9 @@ export default function Footer_Container() {
                                 <h5 className='text-[8px] md:text-[14px] font-[400]' style={{lineHeight:'24px'}}>{t('form.contact_text')}</h5>
                             </div>
                             {/*Contact Form*/}
-                            <form action="" className='w-[70%] flex flex-col justify-center py-8 items-center gap-5'>              
+                            <form action="" className='w-full md:w-[70%] flex flex-col justify-center py-8 items-center gap-5'>              
                                 {/*Name & Email*/}
-                                <div className='w-full flex justify-between items-center gap-5'>
+                                <div className='w-full  flex justify-between items-center gap-5'>
                                     {/*Email*/}
                                     <div className='flex flex-col justify-start items-start w-full gap-3'>
                                         <label htmlFor="">{t('form.email')}*</label>
@@ -119,7 +119,7 @@ export default function Footer_Container() {
             {/*CopyRights*/}
            <span className="w-full font-[400] text-[12px] opacity-50" style={{lineHeight:'18px',letterSpacing:'-0.1px'}}>{tf('copyDate')} {new Date().getFullYear()} © {tf('copright')} - {tf('sophy')}</span>
             {/*Credit Cards*/}
-            <div className="w-full flex justify-between items-center gap-2">
+            <div className=" hidden md:flex w-full justify-between items-center gap-2">
                 <span className="font-[400] text-[12px] opacity-50" style={{lineHeight:'18px',letterSpacing:'-0.1px'}}>Privacy Policy</span>
                 <span className="font-[400] text-[12px] opacity-50" style={{lineHeight:'18px',letterSpacing:'-0.1px'}}>Terms and Conditions</span>
                 <span className="font-[400] text-[12px] opacity-50" style={{lineHeight:'18px',letterSpacing:'-0.1px'}}>Cookie</span>
@@ -127,29 +127,29 @@ export default function Footer_Container() {
             </div>
         </div>
             </div>
-             {/**Site Developer */}
-                <div className="w-full flex flex-wrap justify-center items-center text-xs  gap-1">
-                    <span>{tf('developed')}</span>
-                    <Link
-                    href="https://www.linkedin.com/in/abdalla-yahia/"
-                    target="_blank"
-                    className="hover:underline text-blue-600 font-medium flex items-center gap-1"
-                    >
-                    {tf('eng')} Abdalla Yahia <span className="text-red-500">™</span>
-                    </Link>
-                    <span className="opacity-60">© {tf('copright')}</span>
-                    <span className="flex items-center gap-1">
-                    - {tf('contact')}:
-                    <FaWhatsapp className="text-green-800 shadow" />
-                    <Link
-                        href="https://wa.me/201211100554?text=Hello%20Eng.%20Abdalla,%20I%20would%20like%20to%20connect%20with%20you%20for%20website%20development."
-                        target="_blank"
-                        className="hover:underline "
-                    >
-                        01211100554
-                    </Link>
-                    </span>
-                </div>
+        {/**Site Developer */}
+        <div className="w-full flex flex-wrap justify-center items-center text-xs  gap-1">
+            <span>{tf('developed')}</span>
+            <Link
+            href="https://www.linkedin.com/in/abdalla-yahia/"
+            target="_blank"
+            className="hover:underline text-blue-600 font-medium flex items-center gap-1"
+            >
+            {tf('eng')} Abdalla Yahia <span className="text-red-500">™</span>
+            </Link>
+            <span className="opacity-60">© {tf('copright')}</span>
+            <span className="flex items-center gap-1">
+            - {tf('contact')}:
+            <FaWhatsapp className="text-green-800 shadow" />
+            <Link
+                href="https://wa.me/201211100554?text=Hello%20Eng.%20Abdalla,%20I%20would%20like%20to%20connect%20with%20you%20for%20website%20development."
+                target="_blank"
+                className="hover:underline "
+            >
+                01211100554
+            </Link>
+            </span>
+        </div>
 
     </footer>
   )
